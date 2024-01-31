@@ -1,0 +1,1032 @@
+
+@font-face{
+  font-family: GoodVibrations;
+  src: url(./assets/font/GoodVibrations.ttf);
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-style: none;
+}
+
+ .jardin{
+  position: relative;
+  padding-bottom: 100vh;
+  width: 100%;
+  height: 100vh;
+} 
+.slider-jardin {
+  width: 100%;
+  height: 100%;
+	overflow: hidden;
+  position: absolute;
+  z-index: 1;
+}
+
+.slider-jardin ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-jardin li {
+  max-height: 100vh;
+	width: 100%;
+	height: 100%;
+	list-style: none;
+}
+
+.slider-jardin img {
+	width: 100%;
+  height: 100vh; 
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% {margin-left: 0;}
+  20% {margin-left: 0;}
+  
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+  
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+  
+  75% {margin-left: -300%;}
+  100% {margin-left: -300%;}
+}
+
+.boda{
+  position: absolute;
+/*   top: 0rem; */
+  z-index: 2;
+  width: 100%; 
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.boda h1{
+  font-family: GoodVibrations;
+  color: #fff;
+  font-size: 8rem;
+  font-weight: 500;
+ text-align: center;
+}
+.boda h2{
+  font-family: 'Times New Roman', Times, serif;
+  color: #fff;
+  font-size: 3.5rem;
+  /* font-weight: bold; */
+  margin-bottom: 0.7rem;
+  text-align: center;
+
+}
+.boda h3{
+  border: solid #fff 0.1rem;
+  width: 30rem;
+  border-radius: 1rem;
+  margin-bottom: 3vh;
+}
+
+.boda img{
+  width: 12rem;
+  margin-bottom: -0.5rem;
+}
+
+.boda a{
+  text-decoration: none;
+  color: #fff;
+  width: 11rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid #fff 0.16rem;
+  margin-top: 1.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+/* invitacion */
+.inv{
+  position: relative;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: 100%;
+  height: 30rem;
+  margin: 4rem 0;
+}
+.invitacion{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.invitado{
+  font-family: GoodVibrations;
+  font-size: 16vh;
+  color: #3C4B66;
+}
+
+.frase1{
+  color: #3C4B66;
+  font-size: 1.4rem;
+}
+
+.fecha{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+
+.dia-mes article{
+  border: #3C4B66 solid 1.4px;
+  width: 11rem;
+}
+
+.dia-mes h1{
+  color: #3C4B66;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.dia{
+  width: 8rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dia h1{
+  font-size: 7rem;
+  color: #3C4B66;
+  font-family: serif;
+  font-style: italic;
+}
+
+.lugar{
+  color: #3C4B66;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 1.2rem;
+}
+.frase2{
+  color: #3C4B66;
+  font-size: 1.2rem;
+}
+
+.marco{
+  position: absolute;
+  z-index: 2;
+  width: 65rem;
+  height: 35rem;
+}
+.marco1{
+  display: none;
+}
+.marco2{
+  display: none;
+}
+
+/** Cronograma*/
+
+.cronograma{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.text-crono{
+  font-family: GoodVibrations;
+  font-size: 16vh;
+  color: #3C4B66;
+}
+
+.linea{
+  margin-top: 2rem;
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+}
+.linea-principal{
+  position: absolute;
+  border: solid #3C4B66 2px;
+  width: 55rem;
+  z-index: 1;
+}
+.cronograma-linea{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.horario{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.horario img{
+  width: 8rem;
+}
+.linea-vertical{
+  border: #3C4B66 solid 2px;
+  width: 5rem;
+  transform: rotate(90deg);
+  margin: 2rem 0 ;
+}
+
+.horario h1{
+  font-family: GoodVibrations;
+  font-size: 8vh;
+  color: #3C4B66;
+}
+
+.horario h2{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3C4B66;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.text-h{
+  text-align: center;
+}
+/*** opciones*/
+
+.opciones{
+  background-color: #3C4B66;
+  height: auto;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.carda{
+  width: 16rem;
+  height: 19rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #fff;
+  border-radius: 0.7rem;
+}
+.carda h2 > i{
+  color: #3C4B66;
+  font-size: 5rem;
+}
+.carda h1{
+  font-family:Arial, Helvetica, sans-serif ;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3C4B66;
+  text-align: center;
+}
+.carda h3{
+  font-family:Arial, Helvetica, sans-serif ;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3C4B66;
+  text-align: center;
+}
+.carda a{
+  text-decoration: none;
+  width: 9rem;
+  height: 2.2rem;
+  border: #3C4B66 solid 2px;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3C4B66;
+  font-size: 1.2rem;
+  transition: all 0.6s;
+}
+
+.carda a:hover{
+  background-color: #3C4B66;
+  color: #fff;
+}
+footer{
+  background-color: #3C4B66;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0 1rem 0;
+  gap: 0.5rem;
+}
+footer h1{
+  font-family: GoodVibrations;
+  color: #fff;
+  font-size: 12vh;
+  font-weight: 500;
+}
+footer h2{
+  font-family: 'Times New Roman', Times, serif;
+  color:#fff;
+  font-size: 6vh;
+  font-style: oblique;
+}
+
+footer p{
+  color: #fff;
+  font-weight:lighter;
+  font-size: 0.8rem;
+  margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
+/** media query*/
+@media (max-width: 1200px){
+  .linea{
+    height: auto;
+  }
+  .linea-principal{
+    width: 48rem;
+  }
+  .horario img{
+    width: 6rem;
+  }
+  .horario h1{
+    font-size: 3rem;
+  }
+  .horario h2{
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 1100px){
+  .marco{
+    width: 60rem;
+    height: 35rem;
+  }
+  .invitado{
+    font-size: 5.5rem;
+  }
+  .frase1{
+    font-size: 1.4rem;
+  }
+  .dia-mes article{
+    width: 8rem;
+  }
+  
+  .dia-mes h1{
+  font-size: 1.6rem;
+  }
+  .dia{
+    width: 7rem;
+  }
+  .dia h1{
+    font-size: 7rem;
+  }
+  .lugar{
+    font-size: 1.5rem;
+  }
+  .frase2{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1000px){
+  .boda h1{
+    font-size: 7rem;
+  }
+  .boda h2{ 
+  font-size: 3rem;
+ }
+.text-crono{
+  font-size: 5rem;
+}
+.linea-principal{
+  width: 45rem;
+}
+.linea-vertical{
+  width: 4rem;
+}
+.horario img{
+  width: 5rem;
+}
+.horario h1{
+  font-size: 2.5rem;
+}
+.horario h2{
+  font-size: 1rem;
+}
+}
+
+@media (max-width: 950px){
+  .marco{
+    width: 55rem;
+    height: 35rem;
+  }
+  .invitado{
+    font-size: 4.5rem;
+  }
+  .frase1{
+    font-size: 1.2rem;
+  }
+  .dia-mes article{
+    width: 7rem;
+  }
+  
+  .dia-mes h1{
+  font-size: 1.4rem;
+  }
+  .dia{
+    width: 6rem;
+  }
+  .dia h1{
+    font-size: 7rem;
+  }
+  .lugar{
+    font-size: 1.5rem;
+  }
+  .frase2{
+    font-size: 1rem;
+  }
+  .carda{
+    width: 20rem;
+  }
+}
+
+
+@media (max-width: 900px){
+  .boda h1{
+    font-size: 6rem;
+  }
+  .boda h2{ 
+  font-size: 3rem;
+ }
+ .boda h3{
+  width: 25rem;
+ }
+ .boda img{
+  width: 11rem;
+ }
+ .marco{
+  width: 50rem;
+  height: 30rem;
+}
+.inv{
+  height: 22rem;
+}
+}
+
+@media (max-width: 810px){
+  .invitado{
+    font-size: 4rem;
+  }
+  .frase1{
+    font-size: 1rem;
+  }
+  .dia-mes article{
+    width: 6rem;
+  }
+  
+  .dia-mes h1{
+  font-size: 1.2rem;
+  }
+  .dia{
+    width: 6rem;
+    height: 2rem;
+  }
+  .dia h1{
+    font-size: 6rem;
+  }
+  .lugar{
+    font-size: 1.3rem;
+  }
+  .frase2{
+    font-size: 0.8rem;
+  }
+  .marco{
+    width: 45rem;
+    height: 25rem;
+  }
+  .linea-principal{
+    width: 35rem;
+  }
+  .linea-vertical{
+    width: 4rem;
+  }
+  .horario img{
+    width: 4.5rem;
+  }
+  .horario h1{
+    font-size: 2rem;
+  }
+  .horario h2{
+    font-size: 0.9rem;
+  }
+}
+
+
+
+@media (max-width: 750px){
+  .boda h1{
+    font-size: 5rem;
+  }
+  .boda h2{ 
+  font-size: 3rem;
+ }
+ .inv{
+  height: 18rem;
+ }
+ .marco{
+  width: 40rem;
+  height: 25rem;
+}
+ .invitado{
+  font-size: 3.5rem;
+}
+.frase1{
+  font-size: 0.9rem;
+}
+.dia-mes article{
+  width: 5rem;
+}
+
+.dia-mes h1{
+font-size: 1rem;
+}
+.dia{
+  width: 5rem;
+  height: 2rem;
+}
+.dia h1{
+  font-size: 5rem;
+}
+.lugar{
+  font-size: 1.1rem;
+}
+.frase2{
+  font-size: 0.7rem;
+}
+.carda{
+  width: 25rem;
+}
+}
+
+@media (max-width: 650px){
+  .inv{
+    height: 38rem;
+  }
+  .marco{
+    display: none;
+  }
+  .marco1{
+    position: absolute;
+    display: block;
+    z-index: 3;
+    width: 35rem;
+    height: 48rem;
+  }
+
+  .invitado{
+    font-size: 4rem;
+  }
+  .frase1{
+    font-size: 1.2rem;
+    width: 18rem;
+    text-align: center;
+  }
+  .dia-mes article{
+    width: 6rem;
+  }
+  
+  .dia-mes h1{
+  font-size: 1.4rem;
+  }
+  .dia{
+    width: 6rem;
+    height: 3rem;
+  }
+  .dia h1{
+    font-size: 7rem;
+  }
+  .lugar{
+    font-size: 1.3rem;
+  }
+  .frase2{
+    font-size: 1rem;
+    width: 18rem;
+    text-align: center;
+  }
+  .linea-principal{
+    width: 30rem;
+  }
+}
+
+@media (max-width: 600px){
+  .boda h1{
+    font-size: 3rem;
+  }
+ .boda h3{
+  width: 20rem;
+ }
+ .boda img{
+  width: 9rem;
+ }
+ 
+ footer h1{
+  font-size: 8vh;
+ }
+ .slider-jardin img{
+  height: 100vh;
+ }
+ .jardin{
+  padding-bottom: 50vh;
+  height: 50vh;
+} 
+ .slider-jardin img {
+  height: 50vh; 
+
+}
+
+.linea-vertical{
+  width: 3.5rem;
+}
+.horario img{
+  width: 4rem;
+}
+.horario h1{
+  font-size: 1.8rem;
+}
+.horario h2{
+  font-size: 0.8rem;
+}
+
+.horario h1{
+  font-size: 1.6rem;
+}
+
+
+
+}
+
+
+
+@media (max-width: 550px){
+
+  .inv{
+    height: 32rem;
+  }
+  .marco1{
+    width: 30rem;
+    height: 42rem;
+  }
+
+  .invitado{
+    font-size: 3rem;
+  }
+  .frase1{
+    font-size: 1rem;
+  }
+  .dia-mes article{
+    width: 5rem;
+  }
+  
+  .dia-mes h1{
+  font-size: 1.1rem;
+  }
+  .dia{
+    width: 5rem;
+    height: 2rem;
+  }
+  .dia h1{
+    font-size: 6rem;
+  }
+  .lugar{
+    font-size: 1.1rem;
+  }
+  .frase2{
+    font-size: 0.8rem;
+  }
+  .linea-principal{
+    width: 25rem;
+  }
+  .linea-vertical{
+    width: 3rem;
+  }
+  .horario img{
+    width: 4rem;
+  }
+  .horario h1{
+    font-size: 1.5rem;
+  }
+  .horario h2{
+    font-size: 0.7rem;
+  }
+}
+
+
+
+@media (max-width: 500px){
+  .inv{
+    height: 26rem;
+  }
+  .marco1{
+    width: 28rem;
+    height: 36rem;
+  }
+  .carda{
+    width: 18rem;
+  }
+  .linea{
+    margin-top: 1rem;
+    margin-left: -1rem;
+    height: 20rem;
+  }
+  .linea-principal{
+    transform: rotate(90deg);
+    width: 19rem;
+
+  }
+  .linea-vertical{
+    transform: rotate(0deg);
+    width: 5rem;
+
+  }
+  .cronograma-linea{
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+  .horario{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+@media (max-width: 450px){
+  .boda img{
+    width: 7rem;
+  }
+  .boda h1{
+    font-size: 3.5rem;
+  }
+  .boda h2{
+    font-size: 2rem;
+  }
+  .boda h3{
+    width: 15rem;
+  }
+  
+  .marco1{
+    width: 26rem;
+    height: 36rem;
+  }
+
+  .invitado{
+    font-size: 2.8rem;
+  }
+  .frase1{
+    font-size: 0.9rem;
+    width: 16rem;
+  }
+  .dia-mes article{
+    width: 4rem;
+  }
+  
+  .dia-mes h1{
+  font-size: 1rem;
+  }
+  .dia{
+    width: 4rem;
+    height: 1rem;
+  }
+  .dia h1{
+    font-size: 5.5rem;
+  }
+  .lugar{
+    font-size: 1rem;
+  }
+  .frase2{
+    font-size: 0.7rem;
+    width: 16rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 410px){
+  .boda img{
+    width: 7rem;
+  }
+  .boda h2{
+    font-size: 1.8rem;
+  }
+  .boda h1{
+    font-size: 3rem;
+  }
+  .boda h3{
+    width: 15rem;
+  }
+  .inv{
+    height: 22rem;
+  }
+  .marco1{
+    width: 24rem;
+    height: 32em;
+  }
+  .invitado{
+    font-size: 2.5rem;
+  }
+  .frase1{
+    font-size: 0.8rem;
+    width: 15rem;
+  }
+  .dia-mes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: -2rem 0;
+  }
+  .dia-mes article{
+    width: 4rem;
+  }
+  .dia-mes h1{
+  font-size: 0.7rem;
+  margin: 0.5rem 0rem;
+  }
+  .dia{
+    width: 3.5rem;
+    height: 1rem;
+  }
+  .dia h1{
+    font-size: 4.5rem;
+  }
+  .lugar{
+    font-size: 0.9rem;
+  }
+  .frase2{
+    font-size: 0.7rem;
+    width: 15rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 370px){
+  .marco1{
+    display: none;
+  }
+  .marco2{
+    position: absolute;
+    z-index: 4;
+    display: block;
+    width: 22rem;
+    height: 30rem;
+  }
+  .text-crono{
+    font-size: 4rem;
+  }
+}
+@media (max-width: 350px){
+  .marco2{
+    width: 21rem;
+    height: 30rem;
+  }
+}
+
+@media (max-width: 320px){
+  .boda img{
+    width: 6rem;
+  }
+  .boda h1{
+    font-size: 2.6rem;
+  }
+  .boda h2{
+    font-size: 1.5rem;
+  }
+  .boda h3{
+    width: 12rem;
+  }
+  .marco2{
+    width: 19rem;
+    height: 30rem;
+  }
+  .invitado{
+    font-size: 2.2rem;
+  }
+  .frase1{
+    font-size: 0.7rem;
+    width: 13rem;
+    margin-bottom: 0rem;
+  }
+  .dia-mes article{
+    width: 3rem;
+  }
+  .dia-mes h1{
+  font-size: 0.7rem;
+  margin: 0.5rem 0rem;
+  }
+  .dia{
+    width: 3.5rem;
+    height: 1rem;
+  }
+  .dia h1{
+    font-size: 4.5rem;
+  }
+  .lugar{
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .frase2{
+    font-size: 0.6rem;
+    width: 13rem;
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 300px){
+  .boda img{
+    width: 5rem;
+  }
+  .boda h1{
+    font-size: 2.2rem;
+  }
+  .boda h2{
+    font-size: 1.4rem;
+  }
+
+  .inv{
+    height: 18rem;
+  }
+  .marco2{
+    width: 18rem;
+    height: 26rem;
+  }
+  .invitado{
+    font-size: 2.1rem;
+  }
+  .frase1{
+    font-size: 0.75rem;
+    width: 13rem;
+    margin-bottom: 0rem;
+  }
+  .dia-mes article{
+    width: 3rem;
+  }
+  .dia-mes h1{
+  font-size: 0.7rem;
+  margin: 0.3rem 0rem;
+  }
+  .dia{
+    width: 3rem;
+    height: 1rem;
+  }
+  .dia h1{
+    font-size: 4rem;
+  }
+  .lugar{
+    font-size: 0.7rem;
+  }
+  .frase2{
+    font-size: 0.65rem;
+    width: 11rem;
+    margin-top: -0.5rem;
+
+  }
+  .text-crono{
+    font-size: 3rem;
+  }
+}
