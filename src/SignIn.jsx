@@ -52,7 +52,7 @@ function SignIn() {
          <article className='container-fluids'>
             <img src={login} alt="" />
             <h1>INICIAR SESIÓN</h1>
-            <p>Para acceder a ver la lista de regalos solamente tienes que escribir un nombre y apellido juntos en minúsculas. Ejemplo: juanzunun. Adicional de una contraseña la cual puedas recordar. Por ultimo dar clic en Crear Cuenta y si ya creaste tu cuenta en Iniciar Sesión</p>
+            <p>Para acceder a la lista de regalos solamente tienes que escribir un nombre y apellido juntos en minúsculas. Ejemplo: juanzunun. Adicional de una contraseña la cual puedas recordar. Por ultimo dar clic en Crear Cuenta y si ya creaste tu cuenta en Iniciar Sesión</p>
          </article>
         {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleLogin} className="form-group">
