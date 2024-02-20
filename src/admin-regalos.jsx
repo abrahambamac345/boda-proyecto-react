@@ -164,7 +164,7 @@ function Gifts() {
 
 
     return (
-      <div>
+      <div className='backback'>
         <nav className="navbar navbar-expand-lg navbar-bg px-5 ">
   <div className="container-fluid">
   <a className="navbar-brand text-white nav-center" href="#">LISTA DE REGALOS</a>
