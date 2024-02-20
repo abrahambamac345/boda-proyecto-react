@@ -144,6 +144,7 @@ td{
   @media (max-width: 600px){
     .navs{
       justify-content: center;
+      gap: 0.5rem;
     }
   }
   @media (max-width: 470px){
