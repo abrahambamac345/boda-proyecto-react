@@ -8,6 +8,7 @@ function SignIn() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async (event) => {
@@ -56,22 +57,36 @@ function SignIn() {
          </article>
         {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleLogin} className="form-group">
+        <input
+          type="text"
+          value={username}
+          className="form-control"
+          onChange={(e) => setUsername(e.target.value)}
+          placeholder="Nombre de usuario"
+        />
+        <div className="password-container">
           <input
-              type="text"
-              value={username} // Cambia la variable de estado a `username`
-              className="form-control"
-              onChange={(e) => setUsername(e.target.value)}
-              placeholder="Nombre de usuario"
-          />
-          <input
-            type="password"
+            type={isPasswordVisible ? "text" : "password"}
             value={password}
             className="form-control"
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Contraseña"
           />
-          <button type="submit" className="btn btn-primary">Iniciar Sesión</button>
-        </form>
+          <button
+          type="button"
+          onClick={() => setIsPasswordVisible(!isPasswordVisible)}
+          className="toggle-password-visibility"
+          aria-label={isPasswordVisible ? "Ocultar contraseña" : "Mostrar contraseña"}
+        >
+          {isPasswordVisible ? (
+            <><i className="eyes fa-solid fa-eye"></i></>
+          ) : (
+            <><i className=" eyes fa-solid fa-eye-slash"></i></>
+          )}
+        </button>
+        </div>
+        <button type="submit" className="btn btn-primary">Iniciar Sesión</button>
+      </form>
        {/*  <button onClick={handleGoogleSignIn} className="google-sign-in">Iniciar Sesión con Google</button> */}
         <button onClick={handleSignUp} className="sign-up-button">Crear Cuenta</button>
         </ div>
