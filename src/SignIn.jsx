@@ -5,13 +5,14 @@ import { auth } from './firebase-config';
 import './SignIn.css';
 import login from './assets/img/a (1).png'
 function SignIn() {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const handleLogin = async (event) => {
     event.preventDefault();
+    const email = username + '@gmail.com';
     try {
       await signInWithEmailAndPassword(auth, email, password);
       // Verifica si el inicio de sesión es del administrador
@@ -26,6 +27,7 @@ function SignIn() {
   };
   const handleSignUp = async (event) => {
     event.preventDefault();
+    const email = username + '@gmail.com';
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       navigate('/regalos'); // Redirige a la lista de regalos
@@ -55,11 +57,11 @@ function SignIn() {
         {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleLogin} className="form-group">
           <input
-            type="email"
-            value={email}
-            className="form-control"
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Correo electrónico"
+              type="text"
+              value={username} // Cambia la variable de estado a `username`
+              className="form-control"
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="Nombre de usuario"
           />
           <input
             type="password"

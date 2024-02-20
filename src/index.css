@@ -72,12 +72,37 @@
   align-items: center;
   flex-direction: column;
 }
+.dymboda{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
 .boda h1{
   font-family: GoodVibrations;
   color: #fff;
   font-size: 8rem;
   font-weight: 500;
  text-align: center;
+}
+.y{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.y > article{
+  margin-top :2rem;
+  border: #fff solid 0.2rem;
+  width: 10rem;
+  border-radius: 10rem;
+  display: none;
+}
+.curva{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 .boda h2{
   font-family: 'Times New Roman', Times, serif;
@@ -86,7 +111,14 @@
   /* font-weight: bold; */
   margin-bottom: 0.7rem;
   text-align: center;
+}
 
+.nuestra{
+  display: none;
+}
+.estrellas{
+  width: 2rem;
+  height: 2rem;
 }
 .boda h3{
   border: solid #fff 0.1rem;
@@ -95,24 +127,37 @@
   margin-bottom: 3vh;
 }
 
-.boda img{
+.mateo{
+  font-size: 1.4rem;
+  color: #fff;
+  font-style: oblique;
+}
+.anillo{
   width: 12rem;
   margin-bottom: -0.5rem;
+  margin-top: -1rem;
+  margin-left: 1rem;
 }
 
 .boda a{
   text-decoration: none;
   color: #fff;
-  width: 11rem;
-  height: 2.2rem;
+  width: 12rem;
+  height: 2.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border: solid #fff 0.16rem;
-  margin-top: 1.5rem;
-  font-family: 'Times New Roman', Times, serif;
-  
+  margin-top: 0.8rem;
+  border-radius: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.8s;
 }
+
+.boda a:hover{
+  background-color: #3C4B66;
+}
+
 /* invitacion */
 .inv{
   position: relative;
@@ -394,6 +439,35 @@ footer p{
 }
 
 @media (max-width: 1100px){
+  .curva{
+    display: none;
+  }
+  .nuestra{
+    display: block;
+  }
+  .nuestra img{
+    width: 60rem;
+  }
+  .boda h3{
+    display: none;
+  }
+  .anillo{
+    width: 20rem;
+    margin-bottom: -2rem;
+  }
+  .boda h1{
+    font-size: 8rem;
+  }
+  .boda a{
+    margin-top: 1rem;
+    width: 15rem;
+    font-size: 1.2rem;
+  }
+  .mateo{
+    font-size: 2rem;
+    width: 50rem;
+    text-align: center;
+  }
   .marco{
     width: 60rem;
     height: 35rem;
@@ -429,9 +503,7 @@ footer p{
   .boda h1{
     font-size: 7rem;
   }
-  .boda h2{ 
-  font-size: 3rem;
- }
+
 .text-crono{
   font-size: 5rem;
 }
@@ -453,6 +525,12 @@ footer p{
 }
 
 @media (max-width: 950px){
+  .nuestra img{
+    width: 50rem;
+  }
+  .anillo{
+    width: 18rem;
+  }
   .marco{
     width: 55rem;
     height: 35rem;
@@ -492,14 +570,8 @@ footer p{
   .boda h1{
     font-size: 6rem;
   }
-  .boda h2{ 
-  font-size: 3rem;
- }
- .boda h3{
-  width: 25rem;
- }
- .boda img{
-  width: 11rem;
+ .anillo{
+  width: 16rem;
  }
  .marco{
   width: 50rem;
@@ -511,6 +583,15 @@ footer p{
 }
 
 @media (max-width: 810px){
+  .nuestra img{
+    width: 45rem;
+  }
+  .anillo{
+    width: 15rem;
+  }
+  .mateo{
+    width: 45rem;
+  }
   .invitado{
     font-size: 4rem;
   }
@@ -561,12 +642,38 @@ footer p{
 
 
 @media (max-width: 750px){
-  .boda h1{
-    font-size: 5rem;
+  .nuestra img{
+    width: 40rem;
   }
-  .boda h2{ 
-  font-size: 3rem;
- }
+  .anillo{
+    width: 14rem;
+    margin-bottom: -1rem;
+  }
+  .mateo{
+    width: 40rem;
+    font-size: 1.6rem;
+  }
+  .dymboda{
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: -3rem;
+  }
+  .boda h1{
+    font-size: 10rem;
+  }
+  .y{
+    margin-top: -5rem;
+  }
+  .y > article{
+    display: flex;
+  }
+.boda a{
+  margin-top: 2rem;
+  width: 18rem;
+  height: 3.2rem;
+  font-size: 1.5rem;
+}
+
  .inv{
   height: 18rem;
  }
@@ -606,6 +713,17 @@ font-size: 1rem;
 }
 
 @media (max-width: 650px){
+  .nuestra img{
+    width: 35rem;
+  }
+.mateo{
+  width: 35rem;
+}
+
+.boda h1{
+  font-size: 8rem;
+}
+
   .inv{
     height: 38rem;
   }
@@ -656,31 +774,12 @@ font-size: 1rem;
 }
 
 @media (max-width: 600px){
-  .boda h1{
-    font-size: 3rem;
-  }
- .boda h3{
-  width: 20rem;
- }
- .boda img{
-  width: 9rem;
- }
- 
  footer h1{
   font-size: 8vh;
  }
- .slider-jardin img{
-  height: 100vh;
- }
- .jardin{
-  padding-bottom: 50vh;
-  height: 50vh;
-} 
- .slider-jardin img {
-  height: 50vh; 
-
+.mateo{
+  width: 30rem;
 }
-
 .linea-vertical{
   width: 3.5rem;
 }
@@ -703,9 +802,16 @@ font-size: 1rem;
 }
 
 
-
 @media (max-width: 550px){
-
+  .nuestra img{
+    width: 30rem;
+  }
+  .boda h1{
+    font-size: 7rem;
+  }
+  .y > article{
+    width: 8rem;
+  }
   .inv{
     height: 32rem;
   }
@@ -760,6 +866,24 @@ font-size: 1rem;
 
 
 @media (max-width: 500px){
+    .nuestra img{
+      width: 25rem;
+    }
+    .dymboda{
+      margin-top: 0rem;
+    }
+    .boda h1{
+      font-size: 6rem;
+    }
+    .y > article{
+      width: 6rem;
+    }
+    .mateo{
+      width: 25rem;
+    }
+    .anillo{
+      width: 14rem;
+    }
   .inv{
     height: 26rem;
   }
@@ -797,19 +921,9 @@ font-size: 1rem;
   }
 }
 @media (max-width: 450px){
-  .boda img{
-    width: 7rem;
-  }
-  .boda h1{
-    font-size: 3.5rem;
-  }
-  .boda h2{
-    font-size: 2rem;
-  }
-  .boda h3{
-    width: 15rem;
-  }
-  
+
+
+
   .marco1{
     width: 26rem;
     height: 36rem;

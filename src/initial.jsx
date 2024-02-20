@@ -6,6 +6,8 @@
  import marco from './assets/img/dorado3.png'
  import marco1 from './assets/img/dorado4.png'
  import marco2 from './assets/img/dorado5.png'
+ import estrella from './assets/img/estrella.png'
+ import boda from './assets/img/boda.png'
 /*  import flores1 from './assets/img/6.png'
  import flores2 from './assets/img/7.png' */  
  import icono1 from './assets/img/a (1).png'
@@ -30,14 +32,26 @@ function Main() {
             </ul>
         </div>
         <div className='boda' data-aos="zoom-out-down" data-aos-duration="1000">
-          <img src={anillo} alt="" />
-          <h2 >NUESTRA BODA</h2>
+          <img src={anillo} alt="" className='anillo'/>
+          <div className='curva'>
+            <img className='estrellas' src={estrella} alt="estrella"/>
+            <h2 >NUESTRA BODA</h2>
+            <img className='estrellas' src={estrella} alt="estrella"/>
+          </div>
+          <div className='nuestra'>
+            <img src={boda} alt="" />
+          </div>
           <h3 ></h3>
-          <h1>Danilo y Marcela</h1>
-          {/* <a href="#">VER REGALOS</a> */}
+          <article className='dymboda'>
+            <h1 className='d'>Danilo</h1>
+            <div className='y'><article></article><h1>y</h1><article></article></div>
+            <h1 className='m'>Marcela</h1>
+          </article>
+          <p className='mateo'>Como ya no son dos sino uno, que nadie separe lo que Dios ha unido. Mateo 19:6 </p>
+          <a href="" className='ver'>Ver Invitación</a>
         </div>
     </section> 
-    <section className='inv'>
+    <section className='inv' id='inv'>
       <div className='invitacion 'data-aos="zoom-out-down"data-aos-duration="1000">
           <h1 className='invitado'>¡Estas Invitado!</h1>
           <p className='frase1'>Queremos que seas parte de este momento tan especial...</p>
