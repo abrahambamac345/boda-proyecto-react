@@ -108,7 +108,7 @@ function Main() {
       </div>
       <div className='carda'>
         <h2><i className="fa-solid fa-camera-retro"></i></h2>
-        <h3>COMPARTE FOTOS</h3>
+        <h3>COMPARTIR</h3>
         <a href="">ver lista</a>
       </div>
       <div className='carda'>
