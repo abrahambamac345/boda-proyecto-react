@@ -4,8 +4,9 @@
  import jardin4 from './assets/img/5.png'
  import anillo from './assets/img/anillos.png'
  import marco from './assets/img/dorado3.png'
- import marco1 from './assets/img/dorado4.png'
+ import marco1 from './assets/img/DORADO12.png'
  import marco2 from './assets/img/dorado5.png'
+ import marco21 from './assets/img/DORADO21.png'
  import estrella from './assets/img/estrella.png'
  import boda from './assets/img/boda.png'
 /*  import flores1 from './assets/img/6.png'
@@ -13,7 +14,8 @@
  import icono1 from './assets/img/a (1).png'
  import icono2 from './assets/img/a (2).png'
  import icono3 from './assets/img/a (3).png'
- import icono4 from './assets/img/a (4).png' 
+ import icono4 from './assets/img/a (4).png'
+ import dym from './assets/img/letras.png' 
  import { Link } from 'react-router-dom';
  
 function Main() {
@@ -47,14 +49,15 @@ function Main() {
             <div className='y'><article></article><h1>y</h1><article></article></div>
             <h1 className='m'>Marcela</h1>
           </article>
-          <p className='mateo'>Como ya no son dos sino uno, que nadie separe lo que Dios ha unido. Mateo 19:6 </p>
-          {/* <a href="" className='ver'>Ver Invitación</a> */}
+          <p className='mateo'>Queremos que seas parte de este momento tan especial en nuestras vidas...</p>
         </div>
     </section> 
     <section className='inv' id='inv'>
       <div className='invitacion 'data-aos="zoom-out-down"data-aos-duration="1000">
-          <h1 className='invitado'>¡Estas Invitado!</h1>
-          <p className='frase1'>Queremos que seas parte de este momento tan especial...</p>
+          <h1 className='invitado'>NUESTRA BODA</h1>
+          <img src={dym} alt="Danilo y Marcela" className='dym' />
+          <p className='frase1'>TENEMOS EL HONOR DE INVITARLOS A NUESTRA BODA EL PRÓXIMO</p>
+        {/*   <p className='frase1'>Queremos que seas parte de este momento tan especial...</p> */}
           <div className='fecha'>
             <div className='dia-mes'>
             <article></article>
@@ -71,10 +74,22 @@ function Main() {
             </div>
           </div>
           <h3 className='lugar'>LUGAR: JARDÍN LAS ORQUIDEAS</h3>
-          <p className='frase2'>Como ya no son dos sino uno, que nadie separe lo que Dios ha unido. Mateo 19:6 </p>
+          <p className='frase2'>CON LA BENDICION DE DIOS Y EN COMPAÑIA DE NUESTROS PADRES</p>
+          <div className='padres'>
+              <article>
+                <h1>Daniel Cal</h1>
+                <h1>Silda de León</h1>
+              </article>
+              <article>
+                <h1>Rolando Nij</h1>
+                <h1>Marta Flores</h1>
+              </article>
+          </div>
+          <p className='frase3'>Como ya no son dos sino uno, que nadie separe lo que Dios ha unido. Mateo 19:6 </p>
       </div>
       <img src={marco} alt="" className='marco'/>
       <img src={marco1} alt="" className='marco1'/>
+      <img src={marco21} alt="" className='marco21'/>
       <img src={marco2} alt="" className='marco2'/>
      {/*  <img src={flores1} alt="" className='flores1' />
       <img src={flores2} alt="" className='flores2' /> */}

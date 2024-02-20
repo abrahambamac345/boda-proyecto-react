@@ -178,14 +178,23 @@
 }
 
 .invitado{
-  font-family: GoodVibrations;
-  font-size: 16vh;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  margin-top: 1rem;
   color: #3C4B66;
 }
-
+.dym{
+  margin-top: 0.2rem;
+width: 28rem;
+height: 5rem;
+}
 .frase1{
   color: #3C4B66;
-  font-size: 1.4rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 35rem;
+  text-align: center;
 }
 
 .fecha{
@@ -193,31 +202,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  margin: 2rem 0;
+  gap: 0rem;
+  margin: 0.8rem 0;
 }
 
 
 .dia-mes article{
+  align-items: center;
   border: #3C4B66 solid 1.4px;
-  width: 11rem;
+  width: 9rem;
 }
 
 .dia-mes h1{
   color: #3C4B66;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 
 .dia{
-  width: 8rem;
+  width: 7rem;
   height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .dia h1{
-  font-size: 7rem;
+  font-size: 5rem;
   color: #3C4B66;
   font-family: serif;
   font-style: italic;
@@ -226,9 +236,28 @@
 .lugar{
   color: #3C4B66;
   font-family: 'Times New Roman', Times, serif;
-  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 .frase2{
+  color: #3C4B66;
+  font-size: 1.2rem;
+}
+
+.padres{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.padres h1{
+  font-family: GoodVibrations;
+  font-size: 2rem;
+  color: #3C4B66;
+}
+
+.frase3{
+  font-family: 'Times New Roman', Times, serif;
   color: #3C4B66;
   font-size: 1.2rem;
 }
@@ -236,8 +265,8 @@
 .marco{
   position: absolute;
   z-index: 2;
-  width: 65rem;
-  height: 35rem;
+  width: 68rem;
+  height: 38rem;
 }
 .marco1{
   display: none;
@@ -469,33 +498,23 @@ footer p{
     text-align: center;
   }
   .marco{
-    width: 60rem;
-    height: 35rem;
+    width: 58rem;
+  }
+  .dym{
+  width: 25rem;
+  height: 4rem;
   }
   .invitado{
-    font-size: 5.5rem;
+    font-size: 1.5rem;
   }
-  .frase1{
-    font-size: 1.4rem;
-  }
-  .dia-mes article{
-    width: 8rem;
-  }
-  
   .dia-mes h1{
   font-size: 1.6rem;
   }
-  .dia{
-    width: 7rem;
-  }
   .dia h1{
-    font-size: 7rem;
+    font-size: 5rem;
   }
   .lugar{
     font-size: 1.5rem;
-  }
-  .frase2{
-    font-size: 1rem;
   }
 }
 
@@ -503,7 +522,6 @@ footer p{
   .boda h1{
     font-size: 7rem;
   }
-
 .text-crono{
   font-size: 5rem;
 }
@@ -524,7 +542,7 @@ footer p{
 }
 }
 
-@media (max-width: 950px){
+@media (max-width: 955px){
   .nuestra img{
     width: 50rem;
   }
@@ -535,33 +553,26 @@ footer p{
     width: 55rem;
     height: 35rem;
   }
-  .invitado{
-    font-size: 4.5rem;
-  }
-  .frase1{
-    font-size: 1.2rem;
-  }
+
   .dia-mes article{
     width: 7rem;
   }
   
   .dia-mes h1{
-  font-size: 1.4rem;
-  }
-  .dia{
-    width: 6rem;
-  }
-  .dia h1{
-    font-size: 7rem;
-  }
-  .lugar{
-    font-size: 1.5rem;
-  }
+    font-size: 1.2rem;
+    }
+
   .frase2{
     font-size: 1rem;
   }
   .carda{
     width: 20rem;
+  }
+  .frase3{
+    font-size: 1.1rem;
+  }
+  .marco{
+    width: 52rem;
   }
 }
 
@@ -574,11 +585,11 @@ footer p{
   width: 16rem;
  }
  .marco{
-  width: 50rem;
-  height: 30rem;
+  width: 52rem;
+  height: 36rem;
 }
 .inv{
-  height: 22rem;
+  height: 28rem;
 }
 }
 
@@ -592,36 +603,30 @@ footer p{
   .mateo{
     width: 45rem;
   }
-  .invitado{
-    font-size: 4rem;
-  }
-  .frase1{
-    font-size: 1rem;
-  }
-  .dia-mes article{
-    width: 6rem;
-  }
-  
-  .dia-mes h1{
-  font-size: 1.2rem;
-  }
-  .dia{
-    width: 6rem;
-    height: 2rem;
-  }
-  .dia h1{
-    font-size: 6rem;
-  }
-  .lugar{
-    font-size: 1.3rem;
-  }
-  .frase2{
-    font-size: 0.8rem;
-  }
   .marco{
-    width: 45rem;
-    height: 25rem;
+    display: none;
   }
+  .marco21{
+    position: absolute;
+    display: block;
+    z-index: 3;
+    width: 45rem;
+    height: 43rem;
+  }
+  .inv{
+    height: 38rem;
+  }
+  .invitado{
+    font-size: 2rem;
+  }
+  .dym{
+    width: 30rem;
+    height: 5rem;
+    }
+    .frase1{
+      font-size: 1.2rem;
+      width: 30rem;
+    }
   .linea-principal{
     width: 35rem;
   }
@@ -674,24 +679,9 @@ footer p{
   font-size: 1.5rem;
 }
 
- .inv{
-  height: 18rem;
- }
- .marco{
-  width: 40rem;
-  height: 25rem;
-}
- .invitado{
-  font-size: 3.5rem;
-}
-.frase1{
-  font-size: 0.9rem;
-}
-.dia-mes article{
-  width: 5rem;
-}
 
 .dia-mes h1{
+margin-top: 0.5rem;
 font-size: 1rem;
 }
 .dia{
@@ -705,13 +695,17 @@ font-size: 1rem;
   font-size: 1.1rem;
 }
 .frase2{
-  font-size: 0.7rem;
+  font-size: 0.9rem;
 }
 .carda{
   width: 25rem;
 }
 }
-
+@media (max-width: 700px){
+  .marco21{
+    width: 42rem;
+  }
+}
 @media (max-width: 650px){
   .nuestra img{
     width: 35rem;
@@ -727,50 +721,25 @@ font-size: 1rem;
   .inv{
     height: 38rem;
   }
-  .marco{
+  .marco1{
     display: none;
   }
-  .marco1{
-    position: absolute;
-    display: block;
-    z-index: 3;
-    width: 35rem;
-    height: 48rem;
+
+  .marco21{
+    width: 38rem;
   }
 
-  .invitado{
-    font-size: 4rem;
-  }
-  .frase1{
-    font-size: 1.2rem;
-    width: 18rem;
-    text-align: center;
-  }
-  .dia-mes article{
-    width: 6rem;
-  }
-  
-  .dia-mes h1{
-  font-size: 1.4rem;
-  }
-  .dia{
-    width: 6rem;
-    height: 3rem;
-  }
-  .dia h1{
-    font-size: 7rem;
-  }
-  .lugar{
-    font-size: 1.3rem;
-  }
-  .frase2{
-    font-size: 1rem;
-    width: 18rem;
+  .frase3{
+    width: 25rem;
     text-align: center;
   }
   .linea-principal{
     width: 30rem;
   }
+  .dym{
+    width: 26rem;
+    height: 5rem;
+    }
 }
 
 @media (max-width: 600px){
@@ -796,8 +765,24 @@ font-size: 1rem;
 .horario h1{
   font-size: 1.6rem;
 }
-
-
+.marco21{
+  width: 35rem;
+}
+.frase1{
+  width: 25rem;
+  font-size: 1rem;
+}
+.frase2{
+  width: 25rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.fecha{
+  gap: 1rem;
+}
+.dia-mes article{
+  width: 6rem;
+}
 
 }
 
@@ -812,40 +797,21 @@ font-size: 1rem;
   .y > article{
     width: 8rem;
   }
-  .inv{
-    height: 32rem;
-  }
-  .marco1{
-    width: 30rem;
-    height: 42rem;
-  }
 
+  .marco21{
+    width: 32rem;
+  }
   .invitado{
-    font-size: 3rem;
+    font-size: 1.5rem;
   }
-  .frase1{
-    font-size: 1rem;
-  }
-  .dia-mes article{
-    width: 5rem;
-  }
+  .dym{
+    width: 24rem;
+    height: 4rem;
+    }
+    .frase1, .frase2{
+      width: 23rem;
+    }
   
-  .dia-mes h1{
-  font-size: 1.1rem;
-  }
-  .dia{
-    width: 5rem;
-    height: 2rem;
-  }
-  .dia h1{
-    font-size: 6rem;
-  }
-  .lugar{
-    font-size: 1.1rem;
-  }
-  .frase2{
-    font-size: 0.8rem;
-  }
   .linea-principal{
     width: 25rem;
   }
@@ -885,13 +851,29 @@ font-size: 1rem;
     .anillo{
       width: 14rem;
     }
-  .inv{
-    height: 26rem;
-  }
-  .marco1{
-    width: 28rem;
-    height: 36rem;
-  }
+  .dym{
+    width: 20rem;
+    height: 4rem;
+    }
+    .padres{
+      gap: 2rem;
+    }
+    .frase3,.frase2, .frase1{
+      width: 22rem;
+    }
+    .frase2{
+      font-size: 1rem;
+    }
+    .lugar{
+      margin-top: 1rem;
+    }
+    .padres h1{
+      font-size: 1.6rem;
+    }
+    .marco21{
+      width: 28rem;
+      height: 42rem;
+    }
   .carda{
     width: 18rem;
   }
@@ -922,46 +904,31 @@ font-size: 1rem;
   }
 }
 @media (max-width: 450px){
-
-
-
+  .marco21{
+    display: none;
+  }
   .marco1{
-    width: 26rem;
-    height: 36rem;
+    position: absolute;
+    z-index: 4;
+    display: block;
+    width: 27rem;
+    height: 48rem;
   }
-
-  .invitado{
-    font-size: 2.8rem;
-  }
-  .frase1{
+  .dym{
+    width: 19rem;
+    height: 3.5rem;
+    }
+  .frase1, .frase2, .frase3{
+    width: 19rem;
     font-size: 0.9rem;
-    width: 16rem;
   }
-  .dia-mes article{
-    width: 4rem;
-  }
-  
-  .dia-mes h1{
-  font-size: 1rem;
-  }
-  .dia{
-    width: 4rem;
-    height: 1rem;
-  }
-  .dia h1{
-    font-size: 5.5rem;
-  }
-  .lugar{
-    font-size: 1rem;
-  }
-  .frase2{
-    font-size: 0.7rem;
-    width: 16rem;
-    text-align: center;
+  .frase3{
+    margin-top: 1rem;
+    width: 18rem;
   }
 }
 
-@media (max-width: 410px){
+@media (max-width: 420px){
   .nuestra img{
     width: 22rem;
   }
@@ -976,7 +943,7 @@ font-size: 1rem;
   }
   .mateo{
     width: 21rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   .anillo{
     width: 11rem;
@@ -985,48 +952,36 @@ font-size: 1rem;
 .boda a{
   width: 14rem;
 }
-  .inv{
-    height: 22rem;
+.inv{
+  height: 32rem;
+}
+.marco1{
+  width: 25rem;
+  height: 44rem;
+}
+.invitado{
+  font-size: 1.3rem;
+}
+.dym{
+  width: 16rem;
+  height: 3rem;
   }
-  .marco1{
-    width: 24rem;
-    height: 32em;
-  }
-  .invitado{
-    font-size: 2.5rem;
-  }
-  .frase1{
+  .frase1, .frase2{
     font-size: 0.8rem;
-    width: 15rem;
-  }
-  .dia-mes{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: -2rem 0;
-  }
-  .dia-mes article{
-    width: 4rem;
-  }
-  .dia-mes h1{
-  font-size: 0.7rem;
-  margin: 0.5rem 0rem;
-  }
-  .dia{
-    width: 3.5rem;
-    height: 1rem;
-  }
-  .dia h1{
-    font-size: 4.5rem;
-  }
-  .lugar{
-    font-size: 0.9rem;
   }
   .frase2{
-    font-size: 0.7rem;
+    width: 17rem;
+  }
+  .padres{
+    gap: 1rem;
+  }
+  .dia-mes article{
+    width: 5rem;
+  }
+  .frase3{
+    margin-top: 0.5rem;
     width: 15rem;
-    text-align: center;
+    font-size: 0.9rem;
   }
 }
 
@@ -1034,13 +989,7 @@ font-size: 1rem;
   .marco1{
     display: none;
   }
-  .marco2{
-    position: absolute;
-    z-index: 4;
-    display: block;
-    width: 22rem;
-    height: 30rem;
-  }
+
   .text-crono{
     font-size: 4rem;
   }
