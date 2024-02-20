@@ -72,8 +72,8 @@ function Gifts() {
         text: 'Esta acción no se puede deshacer.',
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
+        confirmButtonColor: 'blue',
+        cancelButtonColor: 'red',
         confirmButtonText: 'Sí, cancelar reserva',
         cancelButtonText: 'Cancelar',
       });
