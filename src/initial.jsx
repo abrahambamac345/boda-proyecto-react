@@ -48,7 +48,7 @@ function Main() {
             <h1 className='m'>Marcela</h1>
           </article>
           <p className='mateo'>Como ya no son dos sino uno, que nadie separe lo que Dios ha unido. Mateo 19:6 </p>
-          <a href="" className='ver'>Ver Invitación</a>
+          {/* <a href="" className='ver'>Ver Invitación</a> */}
         </div>
     </section> 
     <section className='inv' id='inv'>

@@ -968,7 +968,7 @@ font-size: 1rem;
     font-size: 5rem;
   }
   .y{
-    margin-top: -2rem;
+    margin-top: -3rem;
   }
   .y > article{
     width: 4rem;
@@ -978,7 +978,7 @@ font-size: 1rem;
     font-size: 1.2rem;
   }
   .anillo{
-    width: 12rem;
+    width: 11rem;
   }
 
 .boda a{
@@ -1052,18 +1052,10 @@ font-size: 1rem;
 }
 
 @media (max-width: 320px){
-  .boda img{
-    width: 6rem;
-  }
   .boda h1{
     font-size: 2.6rem;
   }
-  .boda h2{
-    font-size: 1.5rem;
-  }
-  .boda h3{
-    width: 12rem;
-  }
+
   .marco2{
     width: 19rem;
     height: 30rem;
