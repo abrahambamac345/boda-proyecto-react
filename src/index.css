@@ -268,10 +268,13 @@ height: 5rem;
   width: 68rem;
   height: 38rem;
 }
-.marco1{
+.marco2{
   display: none;
 }
-.marco2{
+.marco21{
+  display: none;
+}
+.marco1{
   display: none;
 }
 
@@ -540,6 +543,15 @@ footer p{
 .horario h2{
   font-size: 1rem;
 }
+footer h2{
+  font-size: 4rem;
+}
+footer h1{
+  font-size: 5rem;
+}
+footer p{
+  margin-top: 1rem;
+}
 }
 
 @media (max-width: 955px){
@@ -740,6 +752,15 @@ font-size: 1rem;
     width: 26rem;
     height: 5rem;
     }
+    footer h2{
+      font-size: 3rem;
+    }
+    footer h1{
+      font-size: 4rem;
+    }
+    footer p{
+      margin-top: 0.5rem;
+    }
 }
 
 @media (max-width: 600px){
@@ -782,6 +803,15 @@ font-size: 1rem;
 }
 .dia-mes article{
   width: 6rem;
+}
+footer h2{
+  font-size: 2rem;
+}
+footer h1{
+  font-size: 3rem;
+}
+footer p{
+  margin-top: 0.5rem;
 }
 
 }
@@ -975,6 +1005,9 @@ font-size: 1rem;
   .padres{
     gap: 1rem;
   }
+  .padres h1{
+    font-size: 1.4rem;
+  }
   .dia-mes article{
     width: 5rem;
   }
@@ -985,19 +1018,51 @@ font-size: 1rem;
   }
 }
 
-@media (max-width: 370px){
+@media (max-width: 390px){
   .marco1{
-    display: none;
+    width: 23rem;
+    height: 45rem;
   }
-
   .text-crono{
     font-size: 4rem;
   }
+  .dia-mes article{
+    width: 4rem;
+  }
+  .dym{
+    width: 14rem;
+    height: 3rem;
+    }
+  .dia-mes h1{
+    font-size: 0.8rem;
+  }
+  .frase3{
+    font-size: 0.75rem;
+  }
+  .lugar{
+    font-size: 0.9rem;
+  }
+  .frase1, .frase2{
+    width: 16.5rem;
+    font-size: 0.75rem;
+  }
+  footer h2{
+    font-size: 1.5rem;
+  }
+  footer h1{
+    font-size: 2.5rem;
+  }
+  footer p{
+    margin-top: 0.5rem;
+  }
 }
 @media (max-width: 350px){
-  .marco2{
-    width: 21rem;
-    height: 30rem;
+  .marco1{
+    width: 22rem;
+    height: 40rem;
+  }
+  .inv{
+    height: 28rem;
   }
 }
 
