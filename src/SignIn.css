@@ -87,20 +87,21 @@
   }
   
   .google-sign-in:hover {
-    background-color: #a33225; /* A darker shade for hover effect */
+    background-color: red; /* A darker shade for hover effect */
   }
   
   .sign-up-button {
-    background-color: #28a745; /* Bootstrap success color */
+    background-color: green; /* Bootstrap success color */
     border-radius: 0.5rem;
     height: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.8s;
   }
   
   .sign-up-button:hover {
-    background-color: #1e7e34; /* A darker shade for hover effect */
+    background-color: #005c14; /* A darker shade for hover effect */
   }
   
   .error-message {

@@ -90,8 +90,8 @@ function Gifts() {
   
     const handleViewReservation = (gift) => {
       Swal.fire({
-        title: 'Reserva',
-        text: `El regalo ${gift.name} está reservado por: ${gift.reservedBy}`,
+        title: 'Reservado',
+        text: `El regalo ${gift.name} está reservado.`,
         icon: 'info',
         confirmButtonText: 'Cerrar',
       });
@@ -111,28 +111,23 @@ function Gifts() {
     };
     
     return (
-      <div>
+      <div className='backback'>
         <nav className="navbar navbar-expand-lg navbar-bg px-5 ">
-  <div className="container-fluid">
-  <a className="navbar-brand text-white nav-center" href="#">LISTA DE REGALOS</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse " id="navbarNavAltMarkup">
-      <div className="navbar-nav logout-button">
-        <a className="nav-link active" aria-current="page" href="#">Home</a>
-        <button className='btn btn-primary' onClick={handleSignOut}>Cerrar Sesión</button>
-      </div>
-    </div>
+  <div className="navs">
+  <a className="navbar-brand text-white" href="#"><i className="fa-solid fa-gift"></i> LISTA DE REGALOS</a>
+ <div className='apartado'>
+   <a className="nav-link active text-white" aria-current="page" href="#">Home</a>
+   <button className='btn botoncerrar' onClick={handleSignOut}>Cerrar Sesión</button>
+ </div >
   </div>
 </nav>
         <table className="gifts-table ">
         <thead className=''>
           <tr>
-            <th>Listado de regalos</th>
-            <th>Elige tu regalo (Estado)</th>
+            <th>Listado de Regalos</th>
+            <th>Regalo (Estado)</th>
             {/* <th>Nombre Usuario</th> */}
-            <th>Eliminar o visualizar</th>
+            <th>Eliminar o Visualizar</th>
           </tr>
         </thead>
           <tbody>
