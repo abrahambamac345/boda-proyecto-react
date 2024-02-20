@@ -113,11 +113,12 @@
   
   .toggle-password-visibility {
     position: absolute;
-    right: -130px; /* O ajusta según tu diseño */
+    right: 30px; /* O ajusta según tu diseño */
     top: 0px; /* O ajusta según tu diseño */
     background: transparent;
     border: none;
     cursor: pointer;
+    width: 1rem;
   }
 
   .eyes{
