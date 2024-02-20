@@ -961,18 +961,29 @@ font-size: 1rem;
 }
 
 @media (max-width: 410px){
-  .boda img{
-    width: 7rem;
-  }
-  .boda h2{
-    font-size: 1.8rem;
+  .nuestra img{
+    width: 20rem;
   }
   .boda h1{
-    font-size: 3rem;
+    font-size: 5rem;
   }
-  .boda h3{
-    width: 15rem;
+  .y{
+    margin-top: -2rem;
   }
+  .y > article{
+    width: 4rem;
+  }
+  .mateo{
+    width: 20rem;
+    font-size: 1.2rem;
+  }
+  .anillo{
+    width: 12rem;
+  }
+
+.boda a{
+  width: 14rem;
+}
   .inv{
     height: 22rem;
   }
