@@ -124,10 +124,10 @@ function Gifts() {
         <table className="gifts-table ">
         <thead className=''>
           <tr>
-            <th>Listado de Regalos</th>
-            <th>Regalo (Estado)</th>
+            <th>Lista</th>
+            <th>Estado</th>
             {/* <th>Nombre Usuario</th> */}
-            <th>Eliminar o Visualizar</th>
+            <th>Reservar</th>
           </tr>
         </thead>
           <tbody>
