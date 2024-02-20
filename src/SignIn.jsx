@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword,/*  GoogleAuthProvider, signInWithPopup  */} from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { auth } from './firebase-config';
 import './SignIn.css';
-import login from './assets/img/a (1).png'
+import login from './assets/img/anillos2.png'
 function SignIn() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -36,7 +36,7 @@ function SignIn() {
     }
   };
 
-  const handleGoogleSignIn = async () => {
+ /*  const handleGoogleSignIn = async () => {
     const provider = new GoogleAuthProvider();
     try {
       await signInWithPopup(auth, provider);
@@ -44,7 +44,7 @@ function SignIn() {
     } catch (error) {
       setError(error.message);
     }
-  };
+  }; */
 
   return (
     <div className='center-container'>
@@ -52,7 +52,7 @@ function SignIn() {
          <article className='container-fluids'>
             <img src={login} alt="" />
             <h1>INICIAR SESIÓN</h1>
-            <p>Si no tienes una cuenta puedes registrarte al ingresar tu correo electrónico y una contraseña, presionando Crear Cuenta para crear usuario</p>
+            <p>Para acceder a ver la lista de regalos solamente tienes que escribir un nombre y apellido juntos en minúsculas. Ejemplo: juanzunun. Adicional de una contraseña la cual puedas recordar. Por ultimo dar clic en Crear Cuenta y si ya creaste tu cuenta en Iniciar Sesión</p>
          </article>
         {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleLogin} className="form-group">
@@ -72,7 +72,7 @@ function SignIn() {
           />
           <button type="submit" className="btn btn-primary">Iniciar Sesión</button>
         </form>
-        <button onClick={handleGoogleSignIn} className="google-sign-in">Iniciar Sesión con Google</button>
+       {/*  <button onClick={handleGoogleSignIn} className="google-sign-in">Iniciar Sesión con Google</button> */}
         <button onClick={handleSignUp} className="sign-up-button">Crear Cuenta</button>
         </ div>
     </div>
