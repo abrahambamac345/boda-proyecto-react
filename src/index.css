@@ -877,6 +877,7 @@ font-size: 1rem;
     }
     .y > article{
       width: 6rem;
+      border: solid  #fff 2px;
     }
     .mateo{
       width: 25rem;
@@ -962,20 +963,20 @@ font-size: 1rem;
 
 @media (max-width: 410px){
   .nuestra img{
-    width: 20rem;
+    width: 22rem;
   }
   .boda h1{
-    font-size: 5rem;
+    font-size: 6rem;
   }
   .y{
     margin-top: -3rem;
   }
   .y > article{
-    width: 4rem;
+    width: 5rem;
   }
   .mateo{
-    width: 20rem;
-    font-size: 1rem;
+    width: 21rem;
+    font-size: 1.2rem;
   }
   .anillo{
     width: 11rem;
