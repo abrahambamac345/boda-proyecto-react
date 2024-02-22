@@ -37,7 +37,7 @@ function Main() {
       if (result.isConfirmed) {
         window.open("https://maps.app.goo.gl/Rqwz4C7SG7iaMt7z6", "_blank");
       } else if (result.isDismissed && result.dismiss === Swal.DismissReason.cancel) {
-        window.open("https://waze.com/ul?ll=lat,long&navigate=yes", "_blank"); // Reemplaza lat,long con las coordenadas reales
+        window.open("https://ul.waze.com/ul?preview_venue_id=176554130.1765475766.4759480&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location", "_blank"); // Reemplaza lat,long con las coordenadas reales
       }
     });
   };
