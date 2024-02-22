@@ -1136,6 +1136,10 @@ footer p{
     .padres h1{
       font-size: 1.2rem;
     }
+    .carda h3{
+      width: 10rem;
+      background-color: #3C4B66
+    }
 }
 @media (max-width: 340px){
   .marco1{
