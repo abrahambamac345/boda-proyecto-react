@@ -24,7 +24,7 @@ function Main() {
   const showLocationOptions = () => {
     Swal.fire({
       html:'<h1 class="iconos" ><i class="fa-solid fa-map-location-dot"></i><h1/>',
-      title: 'Selecciona la aplicación para dirigirte ala ubicación' ,
+      title: 'Selecciona la aplicación para dirigirte a la ubicación' ,
       customClass: {
         title: 'my-swal-title'
       },
