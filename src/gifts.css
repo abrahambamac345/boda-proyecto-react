@@ -1,12 +1,12 @@
 
 .backback{
-  width: 100%;
+  width: 100% !important;
   background-image: url(./assets/img/3.png);
-  object-fit: cover;
+  object-fit: cover !important;
 }
 
 td{
-  color: #fff;
+  color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
 }
 .gifts-table {
@@ -16,7 +16,8 @@ td{
   
   .gifts-table th,
   .gifts-table td {
-    border: 1px solid #dddddd00;
+    /* border-left: 1px solid rgb(255, 255, 255); */
+    border-bottom: 1px solid rgb(255, 255, 255);
     padding: 8px;
     text-align: center;
 
@@ -25,7 +26,7 @@ td{
     text-align: left;
   }
   .gifts-table th {
-    background-color: #fff;
+    background-color: #ffffff;
     color: #3C4B66;
   }
   
@@ -130,7 +131,9 @@ td{
     /* Otros estilos que quieras aplicar al botón */
   }
   
-
+.swal2-input{
+  width: 85% !important;
+}
   @media (max-width: 800px){
     .nav-center{
       text-align: center;
@@ -138,11 +141,17 @@ td{
       height: 4rem;
       font-size: 2rem;
     }
+    .nonone{
+      display: none;
+    }
   }
   @media (max-width: 600px){
     .navs{
       justify-content: center;
       gap: 0.5rem;
+    }
+    .navbar-bg{
+      height: 8rem;
     }
   }
   @media (max-width: 470px){
@@ -156,9 +165,15 @@ td{
     .navbar-bg{
       height: 8rem;
     }
+    .swal2-input{
+      width: 80% !important;
+    }
   }
   @media (max-width: 360px){
     .button-view, .button-delete, .button-reserve{
       width: 8rem;
     }
+  }
+  .swal2-input{
+    width: 75% !important;
   }

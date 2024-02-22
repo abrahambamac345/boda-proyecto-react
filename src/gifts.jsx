@@ -18,8 +18,10 @@ function Gifts() {
 
     Swal.fire({
       title: 'Tu cariño es el mejor regalo',
+      customClass: {
+        title: 'my-swal-title'
+      },
       text: 'Ningún regalo es más valioso que tu participación, pero si con algo en este día especial nos quisieras regalar puedes ver nuestra lista de deseos y si algo que igual quisieras regalarnos no se encuentra en esta lista puedes llevarlo y siempre lo agradeceríamos.',
-      icon: 'info',
       confirmButtonText: 'OK'
     });
 
@@ -124,7 +126,7 @@ function Gifts() {
   <div className="navs">
   <a className="navbar-brand text-white" href="#"><i className="fa-solid fa-gift"></i> LISTA DE REGALOS</a>
  <div className='apartado'>
-   <a className="nav-link active text-white" aria-current="page" href="#">Home</a>
+   <a className="nav-link active text-white" aria-current="page" href="https://boda-dym.netlify.app/">Inicio</a>
    <button className='btn botoncerrar' onClick={handleSignOut}>Cerrar Sesión</button>
  </div >
   </div>

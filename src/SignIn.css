@@ -63,17 +63,18 @@
     color: white;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.8s ease;
   }
   
   button[type="submit"] {
-    background-color: #3C4B66; /* Bootstrap primary color */
-    border: solid #3C4B66;
+    background-color: blue; /* Bootstrap primary color */
+    border: solid blue;
+    transition: background-color 0.8s ease;
   }
   
   button[type="submit"]:hover {
-    background-color: #232c3d; /* A darker shade for hover effect */
-    border: solid #232c3d;
+    background-color: #0e3f99; /* A darker shade for hover effect */
+    border: solid #0e3f99;
   }
   
   .google-sign-in {

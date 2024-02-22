@@ -23,7 +23,7 @@ function Main() {
   AOS.init();
   const showLocationOptions = () => {
     Swal.fire({
-      html:'<h1 class="iconos"><i class="fa-solid fa-map-location-dot"></i><h1/>',
+      html:'<h1 class="iconos" ><i class="fa-solid fa-map-location-dot"></i><h1/>',
       title: 'Selecciona la aplicación para dirigirte ala ubicación' ,
       customClass: {
         title: 'my-swal-title'
