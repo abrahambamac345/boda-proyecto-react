@@ -15,6 +15,14 @@ function Gifts() {
   const navigate = useNavigate();
 
   useEffect(() => {
+
+    Swal.fire({
+      title: 'Tu cariño es el mejor regalo',
+      text: 'Ningún regalo es más valioso que tu participación, pero si con algo en este día especial nos quisieras regalar puedes ver nuestra lista de deseos y si algo que igual quisieras regalarnos no se encuentra en esta lista puedes llevarlo y siempre lo agradeceríamos.',
+      icon: 'info',
+      confirmButtonText: 'OK'
+    });
+
     // Establecer el observador para el estado de autenticación
     const unsubscribeAuth = onAuthStateChanged(auth, (user) => {
       if (user) {

@@ -140,25 +140,6 @@
   margin-left: 1rem;
 }
 
-.boda a{
-  text-decoration: none;
-  color: #fff;
-  width: 12rem;
-  height: 2.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: solid #fff 0.16rem;
-  margin-top: 0.8rem;
-  border-radius: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
-  transition: all 0.8s;
-}
-
-.boda a:hover{
-  background-color: #3C4B66;
-}
-
 /* invitacion */
 .inv{
   position: relative;
@@ -291,10 +272,11 @@ height: 5rem;
   margin-bottom: 3rem;
 }
 
-.text-crono{
+.text-crono, .text-vesti{
   font-family: GoodVibrations;
   font-size: 16vh;
   color: #3C4B66;
+  text-align: center;
 }
 
 .linea{
@@ -398,7 +380,8 @@ height: 5rem;
   color: #3C4B66;
   text-align: center;
 }
-.carda a{
+.carda a, .ubicacion{
+  background-color: #3c4b6600;
   text-decoration: none;
   width: 9rem;
   height: 2.2rem;
@@ -445,12 +428,38 @@ footer p{
   margin-top: 2rem;
 }
 
+/*** alert*/
 
+/* Estilos personalizados para el botón de confirmación */
+.swal2-confirm {
+  background-color: #3C4B66 !important; /* Color de fondo */
+  width: 11rem !important;
+}
 
-
-
-
-
+/* Estilos personalizados para el botón de cancelación */
+.swal2-cancel {
+  background-color: #3C4B66 !important; /* Color de fondo */
+  color: white; /* Color de texto */
+  width: 11rem !important;
+}
+/** vestimenta*/
+.vestimenta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.vestimenta h2{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 4rem;
+  color: #3C4B66;
+  text-align: center;
+}
+.vestimenta img{
+  width: 20rem;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
 
 /** media query*/
 @media (max-width: 1200px){
@@ -470,7 +479,6 @@ footer p{
     font-size: 1.1rem;
   }
 }
-
 @media (max-width: 1100px){
   .curva{
     display: none;
@@ -521,13 +529,15 @@ footer p{
     font-size: 1.5rem;
   }
 }
-
 @media (max-width: 1000px){
   .boda h1{
     font-size: 7rem;
   }
-.text-crono{
-  font-size: 5rem;
+.text-crono, .text-vesti{
+  font-size: 6rem;
+}
+.vestimenta h2{
+  font-size: 3.5;
 }
 .linea-principal{
   width: 45rem;
@@ -554,7 +564,6 @@ footer p{
   margin-top: 1rem;
 }
 }
-
 @media (max-width: 955px){
   .nuestra img{
     width: 50rem;
@@ -588,8 +597,6 @@ footer p{
     width: 52rem;
   }
 }
-
-
 @media (max-width: 900px){
   .boda h1{
     font-size: 6rem;
@@ -605,7 +612,6 @@ footer p{
   height: 28rem;
 }
 }
-
 @media (max-width: 810px){
   .nuestra img{
     width: 45rem;
@@ -656,9 +662,6 @@ footer p{
     font-size: 0.9rem;
   }
 }
-
-
-
 @media (max-width: 750px){
   .nuestra img{
     width: 40rem;
@@ -691,8 +694,6 @@ footer p{
   height: 3.2rem;
   font-size: 1.5rem;
 }
-
-
 .dia-mes h1{
 margin-top: 0.5rem;
 font-size: 1rem;
@@ -722,6 +723,12 @@ font-size: 1rem;
     margin-top: 0.5rem;
     width: 25rem;
     text-align: center;
+  }
+  .text-vesti{
+    font-size: 5rem;
+  }
+  .vestimenta h2{
+    font-size: 3.5rem;
   }
 }
 @media (max-width: 650px){
@@ -768,7 +775,6 @@ font-size: 1rem;
       margin-top: 0.5rem;
     }
 }
-
 @media (max-width: 600px){
  footer h1{
   font-size: 8vh;
@@ -819,10 +825,16 @@ footer h1{
 footer p{
   margin-top: 0.5rem;
 }
-
+.text-vesti{
+  font-size: 4.5rem;
 }
-
-
+.vestimenta h2{
+  font-size: 3rem;
+}
+.vestimenta img{
+  width: 15rem;
+}
+}
 @media (max-width: 550px){
   .nuestra img{
     width: 30rem;
@@ -863,10 +875,10 @@ footer p{
   .horario h2{
     font-size: 0.7rem;
   }
+  .text-vesti{
+    font-size: 4rem;
+  }
 }
-
-
-
 @media (max-width: 500px){
     .nuestra img{
       width: 25rem;
@@ -926,7 +938,6 @@ footer p{
   .linea-vertical{
     transform: rotate(0deg);
     width: 5rem;
-
   }
   .cronograma-linea{
     flex-direction: column;
@@ -937,6 +948,12 @@ footer p{
     align-items: center;
     justify-content: center;
     gap: 1rem;
+  }
+  .text-vesti{
+    font-size: 3.5rem;
+  }
+  .vestimenta h2{
+    font-size: 2.8rem;
   }
 }
 @media (max-width: 450px){
@@ -962,8 +979,10 @@ footer p{
     margin-top: 1rem;
     width: 18rem;
   }
+  .text-vesti{
+    font-size: 3.5rem;
+  }
 }
-
 @media (max-width: 420px){
   .nuestra img{
     width: 22rem;
@@ -1022,11 +1041,16 @@ footer p{
     width: 15rem;
     font-size: 0.9rem;
   }
+  .text-vesti{
+    font-size: 3rem;
+  }
+  .vestimenta h2{
+    font-size: 2.5rem;
+  }
 }
-
 @media (max-width: 390px){
   .marco1{
-    width: 24rem;
+    width: 23rem;
     height: 45rem;
   }
   .text-crono{
@@ -1061,60 +1085,69 @@ footer p{
   footer p{
     margin-top: 0.5rem;
   }
+  .text-vesti{
+    font-size: 2.8rem;
+  }
+  .vestimenta h2{
+    font-size: 2.2rem;
+  }
 }
-@media (max-width: 350px){
+@media (max-width: 360px){
+  .nuestra img{
+    width: 20rem;
+  }
+  .anillo{
+    width: 9rem;
+  }
+  .boda h1{
+    font-size: 5rem;
+    margin-top: -1rem;
+  }
+  .mateo{
+    font-size: 1rem;
+    width: 18rem;
+  }
+  .y > article{
+    width: 4rem;
+  }
   .marco1{
-    width: 22rem;
+    width: 21rem;
     height: 40rem;
   }
   .inv{
     height: 28rem;
   }
+  .dym{
+    width: 14rem;
+    height: 2.8rem;
+    }
+    .día{
+      font-size: 4rem;
+    }
+    .fecha{
+      gap: 0.6rem;
+    }
+    .frase2, .frase3{
+      font-size: 0.65rem;
+    }
+    .frase3{
+      width: 14rem;
+    }
+    .padres h1{
+      font-size: 1.2rem;
+    }
 }
-
-@media (max-width: 320px){
-  .boda h1{
-    font-size: 2.6rem;
+@media (max-width: 340px){
+  .marco1{
+    width: 20rem;
   }
-
-  .marco2{
-    width: 19rem;
-    height: 30rem;
+  .text-crono{
+    font-size: 3rem;
   }
-  .invitado{
+  .text-vesti{
     font-size: 2.2rem;
   }
-  .frase1{
-    font-size: 0.7rem;
-    width: 13rem;
-    margin-bottom: 0rem;
-  }
-  .dia-mes article{
-    width: 3rem;
-  }
-  .dia-mes h1{
-  font-size: 0.7rem;
-  margin: 0.5rem 0rem;
-  }
-  .dia{
-    width: 3.5rem;
-    height: 1rem;
-  }
-  .dia h1{
-    font-size: 4.5rem;
-  }
-  .lugar{
-    font-size: 0.8rem;
-    text-align: center;
-  }
-  .frase2{
-    font-size: 0.6rem;
-    width: 13rem;
-    text-align: center;
-  }
-
 }
-
 @media (max-width: 300px){
   .boda img{
     width: 5rem;
@@ -1125,7 +1158,6 @@ footer p{
   .boda h2{
     font-size: 1.4rem;
   }
-
   .inv{
     height: 18rem;
   }
@@ -1163,8 +1195,5 @@ footer p{
     width: 11rem;
     margin-top: -0.5rem;
 
-  }
-  .text-crono{
-    font-size: 3rem;
   }
 }

@@ -4,6 +4,8 @@ import Gifts from './gifts';
 import AdminGifts from './admin-regalos';
 import Main from './initial'; // Esto es correcto si Main es el nombre del componente en initial.jsx
 
+
+
 function App() {
   return (
     <Router>

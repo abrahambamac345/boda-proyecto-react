@@ -9,17 +9,34 @@
  import marco21 from './assets/img/DORADO21.png'
  import estrella from './assets/img/estrella.png'
  import boda from './assets/img/boda.png'
-/*  import flores1 from './assets/img/6.png'
- import flores2 from './assets/img/7.png' */  
  import icono1 from './assets/img/a (1).png'
  import icono2 from './assets/img/a (2).png'
  import icono3 from './assets/img/a (3).png'
  import icono4 from './assets/img/a (4).png'
  import dym from './assets/img/letras.png' 
+ import vestimentas from './assets/img/vestimenta.png'
  import { Link } from 'react-router-dom';
- 
+ import Swal from 'sweetalert2';
 function Main() {
 
+  const showLocationOptions = () => {
+    Swal.fire({
+      icon: 'question',
+      title: 'Selecciona la aplicación para la ubicación',
+      showCancelButton: true,
+      confirmButtonText: '<i class="fa-regular fa-map"></i> Google Maps',
+      cancelButtonText: '<i class="fa-brands fa-waze"></i> Waze Maps',
+      showCloseButton: false, // Esto ocultará el botón de cerrar
+      allowOutsideClick: true, // Esto permitirá cerrar la alerta al hacer clic fuera
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.open("https://maps.app.goo.gl/Rqwz4C7SG7iaMt7z6", "_blank");
+      } else if (result.isDismissed && result.dismiss === Swal.DismissReason.cancel) {
+        window.open("https://waze.com/ul?ll=lat,long&navigate=yes", "_blank"); // Reemplaza lat,long con las coordenadas reales
+      }
+    });
+  };
+  
 
   return (
     <>
@@ -27,21 +44,21 @@ function Main() {
     <section className="jardin">
         <div className="slider-jardin">
             <ul>
-                <li><img src={jardin1} alt="" /></li>
-                <li><img src={jardin2} alt="" /></li>
-                <li><img src={jardin3} alt="" /></li>
-                <li><img src={jardin4} alt="" /></li>
+                <li><img src={jardin1} loading="lazy" alt="" /></li>
+                <li><img src={jardin2} loading="lazy" alt="" /></li>
+                <li><img src={jardin3} loading="lazy" alt="" /></li>
+                <li><img src={jardin4} loading="lazy" alt="" /></li>
             </ul>
         </div>
         <div className='boda' data-aos="zoom-out-down" data-aos-duration="1000">
           <img src={anillo} alt="" className='anillo'/>
           <div className='curva'>
-            <img className='estrellas' src={estrella} alt="estrella"/>
+            <img className='estrellas'  src={estrella} alt="estrella"/>
             <h2 >NUESTRA BODA</h2>
             <img className='estrellas' src={estrella} alt="estrella"/>
           </div>
           <div className='nuestra'>
-            <img src={boda} alt="" />
+            <img src={boda} loading="lazy" alt="" />
           </div>
           <h3 ></h3>
           <article className='dymboda'>
@@ -57,7 +74,6 @@ function Main() {
           <h1 className='invitado'>NUESTRA BODA</h1>
           <img src={dym} alt="Danilo y Marcela" className='dym' />
           <p className='frase1'>TENEMOS EL HONOR DE INVITARLOS A NUESTRA BODA EL PRÓXIMO</p>
-        {/*   <p className='frase1'>Queremos que seas parte de este momento tan especial...</p> */}
           <div className='fecha'>
             <div className='dia-mes'>
             <article></article>
@@ -74,7 +90,7 @@ function Main() {
             </div>
           </div>
           <h3 className='lugar'>LUGAR: JARDÍN LAS ORQUIDEAS</h3>
-          <p className='frase2'>CON LA BENDICION DE DIOS Y EN COMPAÑIA DE NUESTROS PADRES</p>
+          <p className='frase2'>CON LA BENDICIÓN DE DIOS Y EN COMPAÑIA DE NUESTROS PADRES</p>
           <div className='padres'>
               <article>
                 <h1>Daniel Cal</h1>
@@ -87,34 +103,38 @@ function Main() {
           </div>
           <p className='frase3'>Como ya no son dos sino uno, que nadie separe lo que Dios ha unido. Mateo 19:6 </p>
       </div>
-      <img src={marco} alt="" className='marco'/>
-      <img src={marco1} alt="" className='marco1'/>
-      <img src={marco21} alt="" className='marco21'/>
-      <img src={marco2} alt="" className='marco2'/>
-     {/*  <img src={flores1} alt="" className='flores1' />
-      <img src={flores2} alt="" className='flores2' /> */}
+      <img src={marco} loading="lazy" alt="" className='marco'/>
+      <img src={marco1} loading="lazy" alt="" className='marco1'/>
+      <img src={marco21} loading="lazy" alt="" className='marco21'/>
+      <img src={marco2} loading="lazy" alt="" className='marco2'/>
     </section>
      <section className='opciones'>
       <div className='carda'>
         <h2><i className="fa-solid fa-gift"></i></h2>
         <h1>REGALOS</h1>
         <Link to="/signin">Ver lista</Link>
-        
       </div>
       <div className='carda'>
-        <h2><i className="fa-solid fa-location-dot"></i></h2>
-        <h1>UBICACIÓN</h1>
-        <a href="https://maps.app.goo.gl/Rqwz4C7SG7iaMt7z6">ver ubicación</a>
+      <h2><i className="fa-solid fa-location-dot"></i></h2>
+      <h1>UBICACIÓN</h1>
+      {/* Usa el evento onClick para llamar a la función de ubicación */}
+      <button onClick={showLocationOptions} className='ubicacion'>Ubicación</button>
+</div>
+      <div className='carda'>
+        <h2><i className="fa-solid fa-clipboard-user"></i></h2>
+        <h3>CONFIRMAR ASISTENCIA</h3>
+        <a href="https://wa.me/56924780">Confirmar</a>
       </div>
       <div className='carda'>
         <h2><i className="fa-solid fa-camera-retro"></i></h2>
-        <h3>COMPARTE FOTOS</h3>
+        <h3>FOTOS Y BUENOS DESEOS</h3>
         <a href="">Compartir</a>
       </div>
-      <div className='carda'>
-        <h2><i className="fa-solid fa-shirt"></i></h2>
-        <h1>VESTIMENTA FORMAL</h1>
-      </div>
+    </section>
+    <section className='vestimenta'>
+      <h1 className='text-vesti'>Código de Vestimenta</h1>
+      <h2>FORMAL</h2>
+      <img src={vestimentas} alt="icono de vestimenta" />
     </section>
     <section className='cronograma'>
       <h1 className='text-crono'>Cronograma</h1>
@@ -122,7 +142,7 @@ function Main() {
         <article className='linea-principal'></article>
         <div className='cronograma-linea'>
           <div className='horario'>
-              <img src={icono1} alt="imagen de un jardin"/>
+              <img src={icono1} loading="lazy" alt="imagen de un jardin"/>
               <article className='linea-vertical'>
               </article>
               <article className='text-h'>
@@ -131,7 +151,7 @@ function Main() {
               </article>
           </div>
           <div className='horario'>
-              <img src={icono2} alt="imagen de un jardin"/>
+              <img src={icono2} loading="lazy" alt="imagen de un jardin"/>
               <article className='linea-vertical'>
               </article>
              <article className='text-h'>
@@ -140,7 +160,7 @@ function Main() {
              </article>
           </div>
           <div className='horario'>
-              <img src={icono3} alt="imagen de un jardin"/>
+              <img src={icono3} loading="lazy" alt="imagen de un jardin"/>
               <article className='linea-vertical'>
               </article>
               <article className='text-h'>
@@ -149,7 +169,7 @@ function Main() {
               </article>
           </div>
           <div className='horario'>
-              <img src={icono4} alt="imagen de un jardin"/>
+              <img src={icono4} loading="lazy" alt="imagen de un jardin"/>
               <article className='linea-vertical'>
               </article>
               <article className='text-h'>

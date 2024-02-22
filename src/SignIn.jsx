@@ -37,15 +37,7 @@ function SignIn() {
     }
   };
 
- /*  const handleGoogleSignIn = async () => {
-    const provider = new GoogleAuthProvider();
-    try {
-      await signInWithPopup(auth, provider);
-      navigate('/regalos'); // Redirige a la lista de regalos
-    } catch (error) {
-      setError(error.message);
-    }
-  }; */
+
 
   return (
     <div className='center-container'>
