@@ -81,6 +81,7 @@ function SignIn() {
       </form>
        {/*  <button onClick={handleGoogleSignIn} className="google-sign-in">Iniciar Sesión con Google</button> */}
         <button onClick={handleSignUp} className="sign-up-button">Crear Cuenta</button>
+        <a href="https://boda-dym.netlify.app/" className='regresar'>Regresar</a>
         </ div>
     </div>
   );

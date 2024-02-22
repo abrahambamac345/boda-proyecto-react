@@ -134,6 +134,16 @@ td{
 .swal2-input{
   width: 85% !important;
 }
+
+.swal2-deny{
+  background-color: red !important; /* Color de fondo */
+  width: 11rem !important;
+  transition: all 0.8s;
+}
+.swal2-deny:hover{
+  transform: scale(1.05);
+}
+
   @media (max-width: 800px){
     .nav-center{
       text-align: center;

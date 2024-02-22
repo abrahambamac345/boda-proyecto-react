@@ -81,11 +81,11 @@ function Gifts() {
         title: '¿Estás seguro de cancelar la reserva?',
         text: 'Esta acción no se puede deshacer.',
         icon: 'warning',
-        showCancelButton: true,
         confirmButtonColor: 'blue',
         cancelButtonColor: 'red',
         confirmButtonText: 'Sí, cancelar reserva',
-        cancelButtonText: 'Cancelar',
+        denyButtonText: 'cancelar',
+        showDenyButton: true,
       });
   
       if (result.isConfirmed) {

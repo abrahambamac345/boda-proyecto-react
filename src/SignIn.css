@@ -66,6 +66,15 @@
     transition: background-color 0.8s ease;
   }
   
+  .regresar{
+    text-align: center !important;
+    width: 100% !important;
+    height: 2rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+  }
   button[type="submit"] {
     background-color: blue; /* Bootstrap primary color */
     border: solid blue;
