@@ -21,8 +21,11 @@ function Main() {
 
   const showLocationOptions = () => {
     Swal.fire({
-      icon: 'question',
-      title: 'Selecciona la aplicación para la ubicación',
+      html:'<h1 class="iconos"><i class="fa-solid fa-map-location-dot"></i><h1/>',
+      title: 'Selecciona la aplicación para dirigirte a la ubicación' ,
+      customClass: {
+        title: 'my-swal-title'
+      },
       showCancelButton: true,
       confirmButtonText: '<i class="fa-regular fa-map"></i> Google Maps',
       cancelButtonText: '<i class="fa-brands fa-waze"></i> Waze Maps',

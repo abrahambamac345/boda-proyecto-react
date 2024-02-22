@@ -392,10 +392,10 @@ height: 5rem;
   align-items: center;
   color: #3C4B66;
   font-size: 1.2rem;
-  transition: all 0.6s;
+  transition: all 0.8s;
 }
 
-.carda a:hover{
+.carda a:hover, .ubicacion:hover{
   background-color: #3C4B66;
   color: #fff;
 }
@@ -431,17 +431,24 @@ footer p{
 /*** alert*/
 
 /* Estilos personalizados para el botón de confirmación */
-.swal2-confirm {
+.swal2-confirm, .swal2-cancel  {
   background-color: #3C4B66 !important; /* Color de fondo */
   width: 11rem !important;
+  transition: all 0.8s;
 }
 
-/* Estilos personalizados para el botón de cancelación */
-.swal2-cancel {
-  background-color: #3C4B66 !important; /* Color de fondo */
-  color: white; /* Color de texto */
-  width: 11rem !important;
+.swal2-cancel:hover, .swal2-confirm:hover{
+  transform: scale(1.05);
 }
+
+.iconos{
+  font-size: 6rem;
+  color: #3C4B66;
+}
+.my-swal-title {
+  color: #3C4B66 !important; /* Cambia este código de color por el que prefieras */
+}
+
 /** vestimenta*/
 .vestimenta{
   display: flex;
@@ -1155,10 +1162,7 @@ footer p{
     .padres h1{
       font-size: 1.2rem;
     }
-    .carda h3{
-      width: 10rem;
-      background-color: #3C4B66
-    }
+
 }
 @media (max-width: 340px){
   .marco1{
