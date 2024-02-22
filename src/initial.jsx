@@ -17,12 +17,14 @@
  import vestimentas from './assets/img/vestimenta.png'
  import { Link } from 'react-router-dom';
  import Swal from 'sweetalert2';
+ import AOS from 'aos';
+import 'aos/dist/aos.css';
 function Main() {
-
+  AOS.init();
   const showLocationOptions = () => {
     Swal.fire({
       html:'<h1 class="iconos"><i class="fa-solid fa-map-location-dot"></i><h1/>',
-      title: 'Selecciona la aplicación para dirigirte a la ubicación' ,
+      title: 'Selecciona la aplicación para dirigirte ala ubicación' ,
       customClass: {
         title: 'my-swal-title'
       },
@@ -57,7 +59,7 @@ function Main() {
           <img src={anillo} alt="" className='anillo'/>
           <div className='curva'>
             <img className='estrellas'  src={estrella} alt="estrella"/>
-            <h2 >NUESTRA BODA</h2>
+            <h2 data-aos="fade-up">NUESTRA BODA</h2>
             <img className='estrellas' src={estrella} alt="estrella"/>
           </div>
           <div className='nuestra'>
@@ -106,10 +108,10 @@ function Main() {
           </div>
           <p className='frase3'>Como ya no son dos sino uno, que nadie separe lo que Dios ha unido. Mateo 19:6 </p>
       </div>
-      <img src={marco} loading="lazy" alt="" className='marco'/>
-      <img src={marco1} loading="lazy" alt="" className='marco1'/>
-      <img src={marco21} loading="lazy" alt="" className='marco21'/>
-      <img src={marco2} loading="lazy" alt="" className='marco2'/>
+      <img src={marco} loading="lazy" alt="" className='marco' data-aos="fade-up"/>
+      <img src={marco1} loading="lazy" alt="" className='marco1' data-aos="fade-up"/>
+      <img src={marco21} loading="lazy" alt="" className='marco21'data-aos="fade-up"/>
+      <img src={marco2} loading="lazy" alt="" className='marco2'data-aos="fade-up"/>
     </section>
      <section className='opciones'>
       <div className='carda'>
