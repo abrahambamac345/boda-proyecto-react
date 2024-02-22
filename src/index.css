@@ -1091,6 +1091,10 @@ footer p{
   .vestimenta h2{
     font-size: 2.2rem;
   }
+  .carda h3{
+    width: 10rem;
+    background-color: #3C4B66
+  }
 }
 @media (max-width: 360px){
   .nuestra img{
