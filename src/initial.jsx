@@ -114,36 +114,36 @@ function Main() {
       <img src={marco2} loading="lazy" alt="" className='marco2'data-aos="fade-up"/>
     </section>
      <section className='opciones'>
-      <div className='carda'>
+      <div className='carda'data-aos="fade-up" >
         <h2><i className="fa-solid fa-gift"></i></h2>
         <h1>REGALOS</h1>
         <Link to="/signin">Ver lista</Link>
       </div>
-      <div className='carda'>
+      <div className='carda' data-aos="fade-up">
       <h2><i className="fa-solid fa-location-dot"></i></h2>
       <h1>UBICACIÓN</h1>
       {/* Usa el evento onClick para llamar a la función de ubicación */}
       <button onClick={showLocationOptions} className='ubicacion'>Ubicación</button>
 </div>
-      <div className='carda'>
+      <div className='carda' data-aos="fade-up">
         <h2><i className="fa-solid fa-clipboard-user"></i></h2>
         <h3>CONFIRMAR ASISTENCIA</h3>
         <a href="https://wa.me/56924780">Confirmar</a>
       </div>
-      <div className='carda'>
+      <div className='carda'data-aos="fade-up">
         <h2><i className="fa-solid fa-camera-retro"></i></h2>
         <h3>FOTOS Y BUENOS DESEOS</h3>
         <a href="">Compartir</a>
       </div>
     </section>
     <section className='vestimenta'>
-      <h1 className='text-vesti'>Código de Vestimenta</h1>
-      <h2>FORMAL</h2>
-      <img src={vestimentas} alt="icono de vestimenta" />
+      <h1 className='text-vesti' data-aos="fade-up">Código de Vestimenta</h1>
+      <h2 data-aos="fade-up">FORMAL</h2>
+      <img src={vestimentas} alt="icono de vestimenta" data-aos="fade-up"/>
     </section>
-    <section className='cronograma'>
-      <h1 className='text-crono'>Cronograma</h1>
-      <div className='linea'>
+    <section className='cronograma' >
+      <h1 className='text-crono' data-aos="fade-up">Cronograma</h1>
+      <div className='linea' data-aos="fade-up">
         <article className='linea-principal'></article>
         <div className='cronograma-linea'>
           <div className='horario'>
@@ -188,8 +188,8 @@ function Main() {
     
     </main>
     <footer>
-      <h2>¡Te Esperamos!</h2>
-      <h1>Danilo y Marcela</h1>
+      <h2 data-aos="fade-up">¡Te Esperamos!</h2>
+      <h1 data-aos="fade-up">Danilo y Marcela</h1>
       <p>DISECKO GT - web 2024</p>
     </footer>
     </>
