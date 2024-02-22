@@ -1049,6 +1049,23 @@ footer p{
   }
 }
 @media (max-width: 390px){
+  .nuestra img{
+    width: 20rem;
+  }
+  .anillo{
+    width: 9rem;
+  }
+  .boda h1{
+    font-size: 5rem;
+    margin-top: -1rem;
+  }
+  .mateo{
+    font-size: 1rem;
+    width: 18rem;
+  }
+  .y > article{
+    width: 4rem;
+  }
   .marco1{
     width: 23rem;
     height: 45rem;
@@ -1092,28 +1109,10 @@ footer p{
     font-size: 2.2rem;
   }
   .carda h3{
-    width: 10rem;
-    background-color: #3C4B66
+    width: 14rem;
   }
 }
 @media (max-width: 360px){
-  .nuestra img{
-    width: 20rem;
-  }
-  .anillo{
-    width: 9rem;
-  }
-  .boda h1{
-    font-size: 5rem;
-    margin-top: -1rem;
-  }
-  .mateo{
-    font-size: 1rem;
-    width: 18rem;
-  }
-  .y > article{
-    width: 4rem;
-  }
   .marco1{
     width: 21rem;
     height: 40rem;
