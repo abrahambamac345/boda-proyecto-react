@@ -21,7 +21,7 @@ function Gifts() {
       customClass: {
         title: 'my-swal-title'
       },
-      text: 'Ningún regalo es más valioso que tu participación, pero si con algo en este día especial nos quisieras regalar puedes ver nuestra lista de deseos y si algo que igual quisieras regalarnos no se encuentra en esta lista puedes llevarlo y siempre lo agradeceríamos.',
+      text: 'Apreciamos que compartas con nosotros celebrando con ilusión nuestro día.. Te compartimos la lista de regalos para que puedas elegir uno de ellos. ¡Gracias por tu presencia! ',
       confirmButtonText: 'OK'
     });
 
