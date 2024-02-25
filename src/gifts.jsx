@@ -21,7 +21,7 @@ function Gifts() {
       customClass: {
         title: 'my-swal-title'
       },
-      text: 'Apreciamos que compartas con nosotros celebrando con ilusión nuestro día.. Te compartimos la lista de regalos para que puedas elegir uno de ellos. ¡Gracias por tu presencia! ',
+      text: 'Apreciamos que compartas con nosotros celebrando con ilusión nuestro día... Te compartimos la lista de regalos para que puedas elegir uno de ellos. ¡Gracias por tu presencia! ',
       confirmButtonText: 'OK'
     });
 
