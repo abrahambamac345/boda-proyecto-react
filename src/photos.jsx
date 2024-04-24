@@ -15,8 +15,8 @@ function Photos() {
     const file = event.target.files[0];
     const reader = new FileReader();
     reader.onload = (e) => {
-      localStorage.setItem('capturedPhoto', e.target.result);
-      window.location.href = '/capture-photos';
+      localStorage.setItem('tomarfotos', e.target.result);
+      window.location.href = '/TomarFotos';
     };
     reader.readAsDataURL(file);
   };
