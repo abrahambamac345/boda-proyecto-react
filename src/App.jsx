@@ -5,7 +5,7 @@ import Gifts from './gifts';
 import AdminGifts from './admin-regalos';
 import Photoshare from './photos';
 import Main from './initial';
-import TomarFoto from './TomarFotos'; 
+import TomarFoto from './TomarFotos';  
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <Route path="/admin" element={<AdminGifts />} />
         <Route path="/fotos" element={<Photoshare />} />
         {/* Nueva ruta para TomarFoto */}
-        <Route path="/tomarfotos" element={<TomarFoto />} />
+       <Route path="/tomarfotos" element={<TomarFoto />} />  
       </Routes>
     </Router>
   );
