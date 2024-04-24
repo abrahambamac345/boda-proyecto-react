@@ -5,7 +5,7 @@ import Gifts from './gifts';
 import AdminGifts from './admin-regalos';
 import Photoshare from './photos';
 import Main from './initial';
-import TomarFoto from './TomarFoto'; // Importamos TomarFoto
+import TomarFoto from './TomarFotos'; 
 
 function App() {
   return (
