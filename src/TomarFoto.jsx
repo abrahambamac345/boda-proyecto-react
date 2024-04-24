@@ -19,7 +19,6 @@ function TomarFotos() {
     const reader = new FileReader();
     reader.onload = (e) => {
       setCapturedPhoto(e.target.result);
-      // Aquí puedes guardar la imagen en la base de datos o hacer otras operaciones
     };
     reader.readAsDataURL(file);
   };
@@ -27,6 +26,13 @@ function TomarFotos() {
   const handleBack = () => {
     setCapturedPhoto(null);
   };
+
+  useEffect(() => {
+    if (capturedPhoto) {
+      localStorage.setItem('capturedPhoto', capturedPhoto);
+      window.location.href = '/fotos';
+    }
+  }, [capturedPhoto]);
 
   return (
     <div className="container-camara">
