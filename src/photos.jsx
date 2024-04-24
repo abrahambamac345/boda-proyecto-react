@@ -27,7 +27,7 @@ function Photos() {
       <h2 className='text-fotos'>Comparte una fotografía o un comentario</h2>
       <div className='boton-FSC'>
         <button onClick={handleOpenCamera} className='tfotos'>Tomar Fotos</button>
-        <Link to="/fotos" className='tfotos'>Subir Fotos</Link>
+        <button className='tfotos'>Subir Fotos</button>
         <button className='tfotos'>Comentario</button>
       </div>
     </section>
