@@ -12,7 +12,7 @@ function TomarFotos() {
     input.accept = 'image/*';
     input.capture = 'environment'; // Para que abra la cámara trasera en dispositivos móviles
     input.addEventListener('change', handleFileSelect, false);
-    input.click();
+    input.click();//hola
   };
 
   const handleFileSelect = (event) => {
