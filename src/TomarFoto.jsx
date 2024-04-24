@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-
 function TomarFotos() {
   const [showCamera, setShowCamera] = useState(false);
   const videoRef = useRef();
@@ -45,25 +44,15 @@ function TomarFotos() {
     window.location.href = '/capture-photos';
   };
 
-  const handleBack = () => {
-    if (videoRef.current.srcObject) {
-      const stream = videoRef.current.srcObject;
-      const tracks = stream.getTracks();
-
-      tracks.forEach((track) => {
-        track.stop();
-      });
-    }
-    window.location.href = '/fotos';
-  };
-
   return (
     <div className="container-camara">
-      <div className="video-container">
-        <video ref={videoRef} autoPlay className="video"></video>
-      </div>
-      <button onClick={handleCapture} className="button-tomar-foto"><i className="fa-regular fa-circle"></i></button>
-      <button onClick={handleBack} className="button-regresar"><i className="fa-regular fa-circle-left"></i></button>
+      {showCamera && (
+        <div className="video-container">
+          <video ref={videoRef} autoPlay className="video"></video>
+        </div>
+      )}
+      <button onClick={handleCapture} className="button-tomar-foto"><i className="fa-regular fa-circle"></i> Tomar Foto</button>
+      <Link to="/fotos" className="button-regresar"><i className="fa-regular fa-circle-left"></i> Regresar</Link>
     </div>
   );
 }
