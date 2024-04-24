@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 function TomarFotos() {
   const [capturedPhoto, setCapturedPhoto] = useState(null);
   const videoRef = useRef();
+  const history = useHistory();
 
   const handleCapture = () => {
     const input = document.createElement('input');
@@ -19,15 +20,13 @@ function TomarFotos() {
     const reader = new FileReader();
     reader.onload = (e) => {
       setCapturedPhoto(e.target.result);
-      // Aquí puedes guardar la imagen en la base de datos o hacer otras operaciones
     };
     reader.readAsDataURL(file);
   };
 
   const handleBack = () => {
-    setCapturedPhoto(null);
+    history.push('/TomarFoto'); // Redirige a TomarFoto.jsx
   };
-
 
   return (
     <div className="container-camara">
