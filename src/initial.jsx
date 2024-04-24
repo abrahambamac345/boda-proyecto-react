@@ -19,6 +19,7 @@
  import Swal from 'sweetalert2';
  import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 function Main() {
   AOS.init();
   const showLocationOptions = () => {
@@ -133,7 +134,7 @@ function Main() {
       <div className='carda'data-aos="fade-up">
         <h2><i className="fa-solid fa-camera-retro"></i></h2>
         <h3>FOTOS Y BUENOS DESEOS</h3>
-        <a href="">Compartir</a>
+        <Link to="/fotos">Compartir</Link>
       </div>
     </section>
     <section className='vestimenta'>

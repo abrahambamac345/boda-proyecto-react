@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { getFirestore, collection, onSnapshot, updateDoc, doc } from 'firebase/firestore';
 import { getAuth, onAuthStateChanged, signOut } from 'firebase/auth';
 import app from './firebase-config';
+import './gifts.css'
 import Swal from 'sweetalert2';
-import './gifts.css'; 
 import { useNavigate } from 'react-router-dom';
 
 const db = getFirestore(app);

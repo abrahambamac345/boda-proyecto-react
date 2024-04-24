@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SignIn from './SignIn';
 import Gifts from './gifts';
 import AdminGifts from './admin-regalos';
+import Photoshare from './photos';
 import Main from './initial'; // Esto es correcto si Main es el nombre del componente en initial.jsx
 
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/regalos" element={<Gifts />} />
         <Route path="/admin" element={<AdminGifts />} />
+        <Route path="/fotos" element={<Photoshare/>} />
       </Routes>
     </Router>
   );
