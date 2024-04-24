@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { storage } from './firebase-config'; // Importar la instancia de Firebase Storage
 
 function Photos() {
   const handleOpenCamera = () => {
@@ -14,9 +14,23 @@ function Photos() {
   const handleFileSelect = (event) => {
     const file = event.target.files[0];
     const reader = new FileReader();
-    reader.onload = (e) => {
-      localStorage.setItem('tomarfotos', e.target.result);
-      window.location.href = '/TomarFotos';
+    reader.onload = async (e) => {
+      const imageFile = e.target.result;
+      const storageRef = storage.ref(); // Obtener una referencia al Storage de Firebase
+      const imageRef = storageRef.child('fotos/' + file.name); // Crear una referencia para la imagen en el Storage
+
+      // Subir la imagen al Storage de Firebase
+      try {
+        await imageRef.putString(imageFile, 'data_url');
+        const imageUrl = await imageRef.getDownloadURL();
+
+        console.log('Imagen subida y URL:', imageUrl);
+
+        // Redirigir a la página de TomarFotos
+        window.location.href = '/TomarFotos';
+      } catch (error) {
+        console.error('Error al subir la imagen:', error);
+      }
     };
     reader.readAsDataURL(file);
   };
