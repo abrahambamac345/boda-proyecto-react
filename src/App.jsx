@@ -1,11 +1,11 @@
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SignIn from './SignIn';
 import Gifts from './gifts';
 import AdminGifts from './admin-regalos';
 import Photoshare from './photos';
-import Main from './initial'; // Esto es correcto si Main es el nombre del componente en initial.jsx
-
-
+import Main from './initial';
+import TomarFoto from './TomarFoto'; // Importamos TomarFoto
 
 function App() {
   return (
@@ -15,9 +15,12 @@ function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/regalos" element={<Gifts />} />
         <Route path="/admin" element={<AdminGifts />} />
-        <Route path="/fotos" element={<Photoshare/>} />
+        <Route path="/fotos" element={<Photoshare />} />
+        {/* Nueva ruta para TomarFoto */}
+        <Route path="/tomarfotos" element={<TomarFoto />} />
       </Routes>
     </Router>
   );
 }
+
 export default App;

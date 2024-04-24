@@ -511,7 +511,66 @@ footer p{
   align-items: center;
 }
 
+/**  camara*/ 
+.container-camara {
+  position: relative;
+}
 
+.video-container {
+  position: relative;
+  width: 100%;
+  height:97vh;
+
+}
+
+.video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  margin-bottom: -2rem;
+  position: fixed;
+}
+
+.button-tomar-foto {
+  position: absolute;
+  bottom:2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  font-size: 4rem;
+  background: white;
+  border-radius: 2rem;
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  background-color: #3c4b6600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.button-tomar-foto:hover{
+  background-color: #fff;
+}
+
+.button-regresar {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 3rem;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+}
+.camara{
+  width: 1rem;
+  background-color: #3C4B66;
+  position: absolute;
+  z-index: 2;
+}
 
 /** media query*/
 @media (max-width: 1200px){
