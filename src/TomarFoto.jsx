@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 function TomarFotos() {
