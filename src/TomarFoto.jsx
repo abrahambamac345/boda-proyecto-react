@@ -25,7 +25,7 @@ function TomarFotos() {
   };
 
   const handleBack = () => {
-    history.push('/TomarFoto'); // Redirige a TomarFoto.jsx
+    history.push('/TomarFoto'); // Redirige a TomarFoto.jsx holaaa mundo
   };
 
   return (
