@@ -17,6 +17,12 @@ function Photos() {
       console.log('Archivo subido con éxito');
       const url = await getDownloadURL(storageRef);
       setDownloadURL(url);
+
+      // Descargar automáticamente el archivo
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = selectedFile.name;
+      link.click();
     } catch (error) {
       console.error('Error al subir el archivo:', error);
     }
