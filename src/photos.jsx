@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { getStorage, ref, uploadBytes } from 'firebase/storage';
+import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import fotografia from './assets/img/fotografia.png';
 
 const storage = getStorage();
 
 function Photos() {
+  const [downloadURL, setDownloadURL] = useState(null);
+
   const handleFileChange = async (event) => {
     const selectedFile = event.target.files[0];
     if (!selectedFile) return;
@@ -13,6 +15,8 @@ function Photos() {
       const storageRef = ref(storage, `uploads/${selectedFile.name}`);
       await uploadBytes(storageRef, selectedFile);
       console.log('Archivo subido con éxito');
+      const url = await getDownloadURL(storageRef);
+      setDownloadURL(url);
     } catch (error) {
       console.error('Error al subir el archivo:', error);
     }
@@ -47,6 +51,7 @@ function Photos() {
         <button className='tfotos' onClick={handleTakePhoto}>Tomar Foto</button>
         <button className='tfotos' onClick={handleRecordVideo}>Grabar Video</button>
         <button className='tfotos'>Subiendo...</button>
+        <button className='tfotos' onClick={() => { if (downloadURL) { window.open(downloadURL); } }}>Descargar Foto</button>
         <button className='tfotos'>Comentario</button>
       </div>
     </section>
