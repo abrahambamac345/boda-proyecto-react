@@ -18,11 +18,20 @@ function Photos() {
     }
   };
 
-  const handleOpenCamera = () => {
+  const handleTakePhoto = () => {
     const input = document.createElement('input');
     input.type = 'file';
-    input.accept = 'image/*, video/*'; // Acepta tanto imágenes como videos
-    input.capture = 'environment'; // Captura desde la cámara trasera del dispositivo si está disponible
+    input.accept = 'image/*';
+    input.capture = 'environment';
+    input.addEventListener('change', handleFileChange, false);
+    input.click();
+  };
+
+  const handleRecordVideo = () => {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'video/*';
+    input.capture = 'camcorder';
     input.addEventListener('change', handleFileChange, false);
     input.click();
   };
@@ -35,7 +44,8 @@ function Photos() {
         <img src={fotografia} loading="lazy" alt="imagen de un jardin" className='fotografia'/>
       </div>
       <div className='boton-FSC'>
-        <button className='tfotos' onClick={handleOpenCamera}>Tomar Fotos o Grabar Video</button>
+        <button className='tfotos' onClick={handleTakePhoto}>Tomar Foto</button>
+        <button className='tfotos' onClick={handleRecordVideo}>Grabar Video</button>
         <button className='tfotos'>Subiendo...</button>
         <button className='tfotos'>Comentario</button>
       </div>
