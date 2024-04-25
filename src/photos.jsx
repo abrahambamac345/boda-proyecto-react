@@ -1,13 +1,10 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { getStorage, ref, uploadBytes } from 'firebase/storage';
 import fotografia from './assets/img/fotografia.png';
 
 const storage = getStorage();
 
 function Photos() {
-  const [file, setFile] = useState(null);
-
   const handleFileChange = async (event) => {
     const selectedFile = event.target.files[0];
     if (!selectedFile) return;
