@@ -24,7 +24,7 @@ function Photos() {
   const handleOpenCamera = () => {
     const input = document.createElement('input');
     input.type = 'file';
-    input.accept = 'image/*'; // Solo acepta imágenes
+    input.accept = 'image/*, video/*'; // Acepta tanto imágenes como videos
     input.capture = 'environment'; // Captura desde la cámara trasera del dispositivo si está disponible
     input.addEventListener('change', handleFileChange, false);
     input.click();
@@ -38,7 +38,7 @@ function Photos() {
         <img src={fotografia} loading="lazy" alt="imagen de un jardin" className='fotografia'/>
       </div>
       <div className='boton-FSC'>
-        <button className='tfotos' onClick={handleOpenCamera}>Tomar Fotos</button>
+        <button className='tfotos' onClick={handleOpenCamera}>Tomar Fotos o Grabar Video</button>
         <button className='tfotos'>Subiendo...</button>
         <button className='tfotos'>Comentario</button>
       </div>
