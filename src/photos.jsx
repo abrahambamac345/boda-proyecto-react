@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-import fotografia from './assets/img/fotografia.png';
 import { useNavigate } from 'react-router-dom';
+import fotografia from './assets/img/fotografia.png' 
 
 const storage = getStorage();
 
 function Photos() {
   const [downloadURL, setDownloadURL] = useState(null);
-  const navigate = useNavigate(); // Obtenemos la función navigate para la navegación programática
+  const navigate = useNavigate();
 
   const handleFileChange = async (event) => {
     const selectedFile = event.target.files[0];
@@ -19,7 +19,7 @@ function Photos() {
       console.log('Archivo subido con éxito');
       const url = await getDownloadURL(storageRef);
       setDownloadURL(url);
-      navigate('/FotoMarco'); // Redirigimos a la página de FotoMarco
+      navigate(`/FotoMarco?url=${encodeURIComponent(url)}`); // Redirige a FotoMarco.jsx con la URL como parámetro de ruta
     } catch (error) {
       console.error('Error al subir el archivo:', error);
     }
@@ -53,8 +53,6 @@ function Photos() {
       <div className='boton-FSC'>
         <button className='tfotos' onClick={handleTakePhoto}>Tomar Foto</button>
         <button className='tfotos' onClick={handleRecordVideo}>Grabar Video</button>
-        <button className='tfotos'>Subiendo...</button>
-        <button className='tfotos' onClick={() => { if (downloadURL) { window.open(downloadURL); } }}>Descargar Foto</button>
         <button className='tfotos'>Comentario</button>
       </div>
     </section>
@@ -62,4 +60,3 @@ function Photos() {
 }
 
 export default Photos;
-
