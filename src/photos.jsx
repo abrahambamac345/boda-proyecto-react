@@ -1,60 +1,61 @@
-import React, { useState } from 'react';
-import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import fotografia from './assets/img/fotografia.png' 
-
-const storage = getStorage();
+import fotografia from './assets/img/fotografia.png'
 
 function Photos() {
-  const [downloadURL, setDownloadURL] = useState(null);
+  const [uploadedImageUrl, setUploadedImageUrl] = useState('');
+  const fileInputRef = useRef(null);
   const navigate = useNavigate();
 
-  const handleFileChange = async (event) => {
+  useEffect(() => {
+    // Verificar si hay una imagen cargada automáticamente al montar el componente
+    if (uploadedImageUrl) {
+      navigate(`/FotoMarco?url=${encodeURIComponent(uploadedImageUrl)}`);
+    }
+  }, [uploadedImageUrl, navigate]);
+
+  const handleFileChange = (event) => {
     const selectedFile = event.target.files[0];
     if (!selectedFile) return;
 
-    try {
-      const storageRef = ref(storage, `uploads/${selectedFile.name}`);
-      await uploadBytes(storageRef, selectedFile);
-      console.log('Archivo subido con éxito');
-      const url = await getDownloadURL(storageRef);
-      setDownloadURL(url);
-      navigate(`/FotoMarco?url=${encodeURIComponent(url)}`); // Redirige a FotoMarco.jsx con la URL como parámetro de ruta
-    } catch (error) {
-      console.error('Error al subir el archivo:', error);
+    // Validar si el archivo es de tipo imagen
+    if (!selectedFile.type.startsWith('image/')) {
+      alert('Por favor selecciona un archivo de imagen válido (png o jpg)');
+      return;
     }
+
+    const reader = new FileReader();
+    reader.onload = (e) => setUploadedImageUrl(e.target.result);
+    reader.readAsDataURL(selectedFile);
   };
 
-  const handleTakePhoto = () => {
-    const input = document.createElement('input');
-    input.type = 'file';
-    input.accept = 'image/*';
-    input.capture = 'environment';
-    input.addEventListener('change', handleFileChange, false);
-    input.click();
-  };
-
-  const handleRecordVideo = () => {
-    const input = document.createElement('input');
-    input.type = 'file';
-    input.accept = 'video/*';
-    input.capture = 'camcorder';
-    input.addEventListener('change', handleFileChange, false);
-    input.click();
+  // Función para abrir el selector de archivos
+  const openFilePicker = () => {
+    fileInputRef.current.click();
   };
 
   return (
     <section className='compartir'>
-      <h1 className='text-vesti' >"Se Parte de Nuestra Historia"</h1>
-      <h2 className='text-fotos' >Comparte una fotografía o un comentario</h2>
-      <div className='fotor'>
-        <img src={fotografia} loading="lazy" alt="imagen de un jardin" className='fotografia'/>
-      </div>
-      <div className='boton-FSC'>
-        <button className='tfotos' onClick={handleTakePhoto}>Tomar Foto</button>
-        <button className='tfotos' onClick={handleRecordVideo}>Grabar Video</button>
-        <button className='tfotos'>Comentario</button>
-      </div>
+      <h1 className='text-vesti' >"Se Parte de Nuestra Historia"</h1> 
+      <h2 className='text-fotos' >Comparte una fotografía o un comentario</h2> 
+      <div className='fotor'> 
+      <img src={fotografia} loading="lazy" alt="imagen de un jardin" className='fotografia'/>
+      </div> 
+      <div className='boton-FSC'> 
+      <input
+        type="file"
+        accept="image/*"
+        onChange={handleFileChange}
+        ref={fileInputRef}
+        style={{ display: 'none' }} // Ocultar el input
+      />
+      <button className='tfotos' onClick={openFilePicker}>Seleccionar Foto</button>
+      <button className='tfotos'>Subir Fotos</button> 
+      <button className='tfotos'>Comentario</button> 
+      </div> 
+
+
+     
     </section>
   );
 }

@@ -574,18 +574,8 @@ footer p{
 /****/
 
 /* Estilos del marco */
-/* Estilos del marco */
-.marco-decorativo {
-  position: relative;
-  display: inline-block;
-  border: 5rem solid #ff0000; /* Añadimos un borde blanco */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
 
-.marco-decorativo img {
-  width: calc(100% - 40px); /* Restamos el doble del ancho del borde al ancho total */
-  height: auto;
-}
+
 
 /* Estilos del botón */
 .button-descargar {
