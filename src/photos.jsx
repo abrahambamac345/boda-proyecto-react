@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import fotografia from './assets/img/fotografia.png';
+import { useNavigate } from 'react-router-dom';
 
 const storage = getStorage();
 
 function Photos() {
   const [downloadURL, setDownloadURL] = useState(null);
+  const navigate = useNavigate(); // Obtenemos la función navigate para la navegación programática
 
   const handleFileChange = async (event) => {
     const selectedFile = event.target.files[0];
@@ -17,12 +19,7 @@ function Photos() {
       console.log('Archivo subido con éxito');
       const url = await getDownloadURL(storageRef);
       setDownloadURL(url);
-
-      // Descargar automáticamente el archivo
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = selectedFile.name;
-      link.click();
+      navigate('/FotoMarco'); // Redirigimos a la página de FotoMarco
     } catch (error) {
       console.error('Error al subir el archivo:', error);
     }
