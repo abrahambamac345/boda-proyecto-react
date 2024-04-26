@@ -574,24 +574,37 @@ footer p{
 /****/
 
 /* Estilos del marco */
+/* Estilos del marco */
 .marco-decorativo {
-  border: 20px solid #fff; /* Borde blanco */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra alrededor del marco */
+  position: relative;
+  display: inline-block;
+  border: 5rem solid #ff0000; /* Añadimos un borde blanco */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.marco-decorativo img {
+  width: calc(100% - 40px); /* Restamos el doble del ancho del borde al ancho total */
+  height: auto;
 }
 
 /* Estilos del botón */
 .button-descargar {
-  background-color: #007bff; /* Color de fondo azul */
-  color: #fff; /* Color de texto blanco */
-  border: none; /* Sin borde */
-  padding: 10px 20px; /* Espaciado interno */
-  font-size: 16px; /* Tamaño de fuente */
-  cursor: pointer; /* Cursor apuntador */
-  border-radius: 5px; /* Bordes redondeados */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .button-descargar:hover {
-  background-color: #0056b3; /* Color de fondo azul más oscuro al pasar el cursor */
+  background-color: #0056b3;
+}
+
+
+.llos{
+  background-color: #007bff;
 }
 
 /** media query*/

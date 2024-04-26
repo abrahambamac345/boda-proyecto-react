@@ -1,59 +1,51 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 
 function FotoMarco() {
   const location = useLocation();
   const url = new URLSearchParams(location.search).get('url');
-  const [frameLoaded, setFrameLoaded] = useState(false);
-
-  useEffect(() => {
-    const frameImage = new Image();
-    frameImage.src = '/ruta/al/marco/decorativo.jpg'; // Reemplaza esto con la ruta real de tu marco decorativo
-    frameImage.onload = () => {
-      setFrameLoaded(true);
-    };
-  }, []);
+  const marcoRef = useRef(null);
 
   const downloadWithFrame = () => {
+    if (!url) return;
+
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
 
-    const frameImage = new Image();
-    frameImage.src = '/ruta/al/marco/decorativo.jpg'; // Reemplaza esto con la ruta real de tu marco decorativo
-    frameImage.onload = () => {
-      canvas.width = frameImage.width;
-      canvas.height = frameImage.height;
+    const marcoImage = new Image();
+    marcoImage.src = '/ruta/al/marco/decorativo.jpg'; // Reemplaza esto con la ruta real de tu marco decorativo
+    marcoImage.onload = () => {
+      canvas.width = marcoImage.width;
+      canvas.height = marcoImage.height;
 
-      ctx.drawImage(frameImage, 0, 0);
-      
+      ctx.drawImage(marcoImage, 0, 0);
+
       const photoImage = new Image();
+      photoImage.crossOrigin = 'anonymous'; // Permitir el acceso a la imagen desde el DOM
       photoImage.src = url;
       photoImage.onload = () => {
-        const photoWidth = frameImage.width * 0.8; // Ajusta el tamaño de la foto en relación al marco
-        const photoHeight = photoImage.height * (photoWidth / photoImage.width);
-        const x = (canvas.width - photoWidth) / 2;
-        const y = (canvas.height - photoHeight) / 2;
-        
-        ctx.drawImage(photoImage, x, y, photoWidth, photoHeight);
-        
+        ctx.drawImage(photoImage, 20, 20, canvas.width - 40, canvas.height - 40); // Posicionar y ajustar el tamaño de la foto dentro del marco
+
+        // Convertir el canvas a una URL de Blob
         canvas.toBlob((blob) => {
+          // Crear un enlace para descargar la imagen
           const link = document.createElement('a');
           link.href = URL.createObjectURL(blob);
-          link.download = 'foto_con_marco.jpg';
-          link.click();
+          link.download = 'foto_con_marco.jpg'; // Nombre del archivo a descargar
+          document.body.appendChild(link); // Añadir el enlace al DOM
+          link.click(); // Hacer clic en el enlace
+          document.body.removeChild(link); // Eliminar el enlace del DOM después de la descarga
         }, 'image/jpeg');
       };
     };
   };
 
-  
   return (
     <div>
-      <h1>¡Aquí está tu foto con el marco!</h1>
-      {frameLoaded && (
-        <div className="marco-decorativo">
-          <img src={url} alt="Tu foto" style={{ maxWidth: '100%', maxHeight: '100%', display: 'block' }} />
+      <h1 className='llos'>¡Aquí está tu foto con el marco!</h1>
+      {url && (
+        <div className="marco-decorativo" ref={marcoRef}>
+          <img src={url} alt="Tu foto" className="foto-con-marco" />
           <button className="button-descargar" onClick={downloadWithFrame}>Descargar con Marco</button>
         </div>
       )}
