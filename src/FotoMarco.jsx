@@ -53,19 +53,20 @@ function FotoMarco() {
   };
 
   return (
-    <div className='foto-marco-container'>
-      <h1 className='text-vesti'>Descarga un recuerdo!</h1>
-      <button onClick={handleDownload} className='tfotos'>Descargar Foto con Marco</button>
-      <div className="image-container">
-        {uploadedImageUrl && (
-          <img src={uploadedImageUrl} alt="Foto cargada" className="default-image" />
-        )}
-        {defaultImageUrl && (
-          <img src={defaultImageUrl} alt="Imagen predefinida" className="uploaded-image" />
-        )}
+  <div>
+      <div className='foto-marco-container'>
+        <div className="image-container">
+          {uploadedImageUrl && (
+            <img src={uploadedImageUrl} alt="Foto cargada" className="default-image" />
+          )}
+          {defaultImageUrl && (
+            <img src={defaultImageUrl} alt="Imagen predefinida" className="uploaded-image" />
+          )}
+        </div>
       </div>
-      
-    </div>
+      <h1 className='text-vesti'>Descarga un recuerdo!</h1>
+        <button onClick={handleDownload} className='tfotos'>Descargar Foto con Marco</button>
+  </div>
   );
 }
 
