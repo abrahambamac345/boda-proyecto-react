@@ -20,30 +20,30 @@ function FotoMarco() {
 
   const handleDownload = () => {
     if (!uploadedImageUrl) return;
-  
+
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
-  
+
     const uploadedImage = new Image();
     uploadedImage.onload = () => {
       canvas.width = uploadedImage.width;
       canvas.height = uploadedImage.height;
-  
+
       const defaultImage = new Image();
       defaultImage.onload = () => {
         ctx.drawImage(uploadedImage, 0, 0, canvas.width, canvas.height);
         ctx.drawImage(defaultImage, 0, 0, canvas.width, canvas.height);
-  
+
         // Convertir el canvas a una URL de datos
         const dataURL = canvas.toDataURL('image/png');
-  
+
         // Crear un enlace para abrir la imagen combinada en una nueva pestaña
         const link = document.createElement('a');
         link.href = dataURL;
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
         link.download = 'foto_con_marco.png'; // Nombre del archivo a descargar
-  
+
         // Simular un clic en el enlace para abrirlo en una nueva pestaña
         link.click();
       };
@@ -51,20 +51,19 @@ function FotoMarco() {
     };
     uploadedImage.src = uploadedImageUrl;
   };
-  
-  
-  
-  return (
-    <div>
-              <button onClick={handleDownload}>Descargar Foto con Marco</button>
-      <h1>¡Agrega un marco a tu foto!</h1>
-      {uploadedImageUrl && (
-        <img src={uploadedImageUrl} alt="Foto cargada" />
-      )}
-      {defaultImageUrl && (
-        <img src={defaultImageUrl} alt="Imagen predefinida" />
-      )}
 
+  return (
+    <div className='foto-marco-container'>
+      <h1 className='text-vesti'>Descarga un recuerdo!</h1>
+      <button onClick={handleDownload} className='button-descargar'>Descargar Foto con Marco</button>
+      <div className="image-container">
+        {uploadedImageUrl && (
+          <img src={uploadedImageUrl} alt="Foto cargada" className="default-image" />
+        )}
+        {defaultImageUrl && (
+          <img src={defaultImageUrl} alt="Imagen predefinida" className="uploaded-image" />
+        )}
+      </div>
     </div>
   );
 }
