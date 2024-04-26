@@ -571,6 +571,28 @@ footer p{
   position: absolute;
   z-index: 2;
 }
+/****/
+
+/* Estilos del marco */
+.marco-decorativo {
+  border: 20px solid #fff; /* Borde blanco */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra alrededor del marco */
+}
+
+/* Estilos del botón */
+.button-descargar {
+  background-color: #007bff; /* Color de fondo azul */
+  color: #fff; /* Color de texto blanco */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cursor apuntador */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+.button-descargar:hover {
+  background-color: #0056b3; /* Color de fondo azul más oscuro al pasar el cursor */
+}
 
 /** media query*/
 @media (max-width: 1200px){
