@@ -19,7 +19,7 @@ function FotoMarco() {
   }, [location.search]);
 
   const handleDownload = () => {
-    if (!uploadedImageUrl) return; // Verificar si se ha cargado una imagen
+    if (!uploadedImageUrl) return;
   
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
@@ -31,24 +31,27 @@ function FotoMarco() {
   
       const defaultImage = new Image();
       defaultImage.onload = () => {
-        // Dibujar la imagen del marco primero
         ctx.drawImage(uploadedImage, 0, 0, canvas.width, canvas.height);
-  
-        // Luego dibujar la imagen subida encima del marco
         ctx.drawImage(defaultImage, 0, 0, canvas.width, canvas.height);
   
-        // Descargar la imagen combinada
-        canvas.toBlob((blob) => {
-          const link = document.createElement('a');
-          link.href = URL.createObjectURL(blob);
-          link.download = 'foto_con_marco.png'; // Nombre del archivo a descargar
-          link.click();
-        });
+        // Convertir el canvas a una URL de datos
+        const dataURL = canvas.toDataURL('image/png');
+  
+        // Crear un enlace para abrir la imagen combinada en una nueva pestaña
+        const link = document.createElement('a');
+        link.href = dataURL;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.download = 'foto_con_marco.png'; // Nombre del archivo a descargar
+  
+        // Simular un clic en el enlace para abrirlo en una nueva pestaña
+        link.click();
       };
       defaultImage.src = defaultImageUrl;
     };
     uploadedImage.src = uploadedImageUrl;
   };
+  
   
   
   return (
