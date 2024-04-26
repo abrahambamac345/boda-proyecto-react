@@ -613,7 +613,7 @@ footer p{
 
 .image-container img {
   width: 100%;
-  height: auto; /* Ajustar automáticamente la altura de la imagen */
+  height: 100%; /* Ajustar automáticamente la altura de la imagen */
   max-width: 100%; /* Limitar el ancho máximo de la imagen al tamaño del contenedor */
   max-height: 100%; /* Limitar la altura máxima de la imagen al tamaño del contenedor */
 }

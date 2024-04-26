@@ -64,6 +64,8 @@ function FotoMarco() {
           <img src={defaultImageUrl} alt="Imagen predefinida" className="uploaded-image" />
         )}
       </div>
+      <h1 className='text-vesti'>Descarga un recuerdo!</h1>
+      <button onClick={handleDownload} className='button-descargar'>Descargar Foto con Marco</button>
     </div>
   );
 }
