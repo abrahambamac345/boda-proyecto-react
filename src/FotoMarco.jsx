@@ -64,8 +64,10 @@ function FotoMarco() {
           )}
         </div>
       </div>
-      <h1 className='text-vesti'>Descarga un recuerdo!</h1>
-        <button onClick={handleDownload} className='tfotos'>Descargar Foto con Marco</button>
+     <div className='sss'>
+         <h1 className='text-vesti'>Descarga un recuerdo!</h1>
+           <button onClick={handleDownload} className='tfotos'>Descargar Foto con Marco</button>
+     </div>
   </div>
   );
 }
