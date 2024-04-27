@@ -7,12 +7,21 @@ function FotoMarco() {
   const location = useLocation();
   const [uploadedImageUrl, setUploadedImageUrl] = useState('');
   const [selectedFrame, setSelectedFrame] = useState(defaultImage1); // Estado para almacenar el marco seleccionado
+  const [imageWidth, setImageWidth] = useState(0);
+  const [imageHeight, setImageHeight] = useState(0);
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const url = searchParams.get('url');
     if (url) {
       setUploadedImageUrl(url);
+      // Obtener las dimensiones de la imagen cargada
+      const img = new Image();
+      img.onload = () => {
+        setImageWidth(img.width);
+        setImageHeight(img.height);
+      };
+      img.src = url;
     }
   }, [location.search]);
 
@@ -57,10 +66,10 @@ function FotoMarco() {
       <div className='foto-marco-container'>
         <div className="image-container">
           {uploadedImageUrl && (
-            <img src={uploadedImageUrl} alt="Foto cargada" className="default-image" />
+            <img src={uploadedImageUrl} alt="Foto cargada" className="default-image" style={{ width: imageWidth, height: imageHeight }} />
           )}
           {selectedFrame && (
-            <img src={selectedFrame} alt="Marco seleccionado" className="uploaded-image" />
+            <img src={selectedFrame} alt="Marco seleccionado" className="uploaded-image" style={{ width: imageWidth, height: imageHeight }} />
           )}
         </div>
       </div>
