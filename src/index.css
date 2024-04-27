@@ -482,7 +482,7 @@ footer p{
   gap: 2rem;
 }
 .tfotos{
-  width: 10rem;
+  width: 12rem;
   height: 3.5rem;
   border: #3C4B66 solid 3px;
   border-radius: 0.5rem;
@@ -494,7 +494,7 @@ footer p{
   transition: all 0.7s;
   
 }
-.tfotos:hover{
+.tfotos:hover, .select-colore:hover{
   background-color: #3C4B66;
   color: #fff;
 }
@@ -571,27 +571,6 @@ footer p{
   position: absolute;
   z-index: 2;
 }
-/****/
-
-/* Estilos del marco */
-/* .foto-marco-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.image-container {
-  margin-bottom: 20px;
-}
-
-.button-container {
-  margin-top: 20px;
-}
-
-.image-container {
-  max-width: 100%;
-  max-height: 80vh; /* Limitar la altura máxima al 80% del tamaño de la ventana */
-/*   overflow: hidden; /* Ocultar cualquier parte de la imagen que exceda el tamaño máximo */
 
 .foto-marco-container {
   display: flex;
@@ -642,7 +621,29 @@ footer p{
   gap: 1rem;
 }
 
-
+.select-colore{
+  background-color: #3c4b6600;
+  color: #3C4B66;
+  width: 12rem;
+  height: 3.8rem;
+  border: #3C4B66 solid 3px;
+  border-radius: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  transition: all 0.7s;
+}
+.link-fotos{
+  margin-top: -2rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+/* .optiona{
+  padding: 2rem !important;
+  width: 100%;
+  height: 10vh;
+} */
 /* Estilos del botón */
 .button-descargar {
   background-color: #007bff;
@@ -935,6 +936,9 @@ font-size: 1rem;
   .tfotos{
     width: 8rem;
   }
+  .select-colore{
+    width: 8rem;
+  }
   .text-fotos{
     font-size: 2.5rem;
   }
@@ -986,6 +990,9 @@ font-size: 1rem;
       width: 30rem;
     }
     .tfotos{
+      width: 8rem;
+    }
+    .select-colore{
       width: 8rem;
     }
     .text-fotos{
@@ -1187,6 +1194,9 @@ footer p{
     margin-top: 1rem;
   }
   .tfotos{
+    width: 18rem;
+  }
+  .select-colore{
     width: 18rem;
   }
 }
@@ -1411,6 +1421,9 @@ footer p{
       margin: 0 0.8rem;
     }
     .tfotos{
+      width: 14rem;
+    }
+    .select-colore{
       width: 14rem;
     }
   

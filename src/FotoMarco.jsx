@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import defaultImage1 from './assets/img/marcoboda (1).png'; // Importar la imagen predefinida del primer marco
 import defaultImage2 from './assets/img/marcoboda (2).png'; // Importar la imagen predefinida del segundo marco
 
@@ -66,11 +66,12 @@ function FotoMarco() {
       </div>
       <div className='sss'>
         <h1 className='text-vesti'>Descarga un recuerdo!</h1>
-        <select onChange={handleFrameChange}>
-          <option value={defaultImage1}>Marco 1</option>
+        <select onChange={handleFrameChange} className="form-select form-select-lg mb-3 select-colore">
+          <option value={defaultImage1} className='optiona'>Marco 1</option>
           <option value={defaultImage2}>Marco 2</option>
         </select>
-        <button onClick={handleDownload} className='tfotos'>Descargar Foto con Marco</button>
+        <button onClick={handleDownload} className='tfotos'>Descargar Foto</button>
+        <Link to="/photos" className='tfotos link-fotos'>Tomar otra foto</Link> {/* Botón para regresar a photos.jsx */}
       </div>
     </div>
   );
