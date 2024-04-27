@@ -504,13 +504,16 @@ footer p{
 .fotografia{
   width: 40rem;
 }
-.fotor{
+.fotor, .fotora{
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.fotora{
+  margin-bottom: 2rem;
+}
 /**  camara*/ 
 .container-camara {
   position: relative;
@@ -639,12 +642,7 @@ footer p{
   justify-content: center;
   text-decoration: none;
 }
-/* .optiona{
-  padding: 2rem !important;
-  width: 100%;
-  height: 10vh;
-} */
-/* Estilos del botón */
+
 .button-descargar {
   background-color: #007bff;
   color: #fff;
@@ -659,9 +657,47 @@ footer p{
   background-color: #0056b3;
 }
 
-
 .llos{
-  olor: #3C4B66;
+  color: #3C4B66;
+}
+
+.navbar-photo{
+  width: 100%;
+  height: 5rem;
+  margin-bottom: 2rem;
+  background-color: #3C4B66;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  padding: 0 5rem;
+}
+
+.goback{
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: all 0.7s;
+}
+
+.goback:hover{
+  color: #007bff;
+}
+
+.parrafos{
+  color: #3C4B66;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.instrucciones{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 3rem 0rem 3rem;
+  width: 100%;
+}
+.acord{
+  border: #3C4B66 solid 3px;
 }
 
 /** media query*/

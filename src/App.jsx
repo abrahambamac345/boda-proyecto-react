@@ -7,6 +7,7 @@ import Photoshare from './photos';
 import Main from './initial'; 
 import FotoMarco from './FotoMarco'; 
 
+
 function App() {
   return (
     <Router>

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import defaultImage1 from './assets/img/marcoboda (1).png'; // Importar la imagen predefinida del primer marco
-import defaultImage2 from './assets/img/marcoboda (2).png'; // Importar la imagen predefinida del segundo marco
+import defaultImage2 from './assets/img/marcoboda (3).png'; // Importar la imagen predefinida del segundo marco
+import fotografia from './assets/img/fotografia.png'
 
 function FotoMarco() {
   const location = useLocation();
@@ -73,6 +74,7 @@ function FotoMarco() {
           )}
         </div>
       </div>
+      <hr />
       <div className='sss'>
         <h1 className='text-vesti'>Descarga un recuerdo!</h1>
         <select onChange={handleFrameChange} className="form-select form-select-lg mb-3 select-colore">
@@ -80,8 +82,16 @@ function FotoMarco() {
           <option value={defaultImage2}>Marco 2</option>
         </select>
         <button onClick={handleDownload} className='tfotos'>Descargar Foto</button>
-        <Link to="/photos" className='tfotos link-fotos'>Tomar otra foto</Link> {/* Botón para regresar a photos.jsx */}
+        <Link to="/fotos" className='tfotos link-fotos'>Tomar otra foto</Link> {/* Botón para regresar a photos.jsx */}
       </div>
+      <div className='fotora'> 
+      <img src={fotografia} loading="lazy" alt="imagen de un jardin" className='fotografia'/>
+      </div> 
+       <footer>
+      <h2 >¡Gracias por estar!</h2>
+      <h1 >Danilo y Marcela</h1>
+      <p>DISECKO GT - web 2024</p>
+    </footer>
     </div>
   );
 }
