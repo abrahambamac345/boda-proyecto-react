@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import defaultImage from './assets/img/DORADO12.png'; // Importar la imagen predefinida
+import defaultImage from './assets/img/marcoboda.png'; // Importar la imagen predefinida
 
 function FotoMarco() {
   const location = useLocation();
