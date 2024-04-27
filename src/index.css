@@ -492,6 +492,10 @@ footer p{
   font-size: 1.2rem;
   background-color: #3c4b6600;
   transition: all 0.7s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   
 }
 .tfotos:hover, .select-colore:hover{
@@ -953,6 +957,9 @@ font-size: 1rem;
 .carda{
   width: 25rem;
 }
+.navbar-photo{
+  padding: 0 2rem;
+}
 }
 @media (max-width: 700px){
   .marco21{
@@ -1143,6 +1150,9 @@ footer p{
   }
   .text-fotos{
     font-size: 2rem;
+  }
+  .navbar-photo{
+    padding: 0 1rem;
   }
 }
 @media (max-width: 500px){
@@ -1462,6 +1472,9 @@ footer p{
     .select-colore{
       width: 14rem;
     }
+    .goback{
+      font-size: 1.5rem;
+    }
   
 }
 @media (max-width: 340px){
@@ -1535,5 +1548,6 @@ footer p{
   .boton-FSC{
     margin: 1rem 0;
   }
+
 }
 

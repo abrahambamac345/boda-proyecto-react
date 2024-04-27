@@ -34,6 +34,7 @@ function Photos() {
   const openFilePicker = () => {
     fileInputRef.current.click();
   };
+  
 
   return (
     <section className='compartir'>
@@ -54,8 +55,7 @@ function Photos() {
         style={{ display: 'none' }} // Ocultar el input
       />
       <button className='tfotos' onClick={openFilePicker}>Tomar foto</button>
-      <button className='tfotos'>Subir Fotos</button> 
-      <button className='tfotos'>Comentario</button> 
+      <Link to="/Fotosvideos" className='tfotos'>Fotos y videos</Link>
       </div> 
       <hr />
       <div className='instrucciones'>

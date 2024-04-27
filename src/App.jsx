@@ -6,7 +6,7 @@ import AdminGifts from './admin-regalos';
 import Photoshare from './photos';
 import Main from './initial'; 
 import FotoMarco from './FotoMarco'; 
-
+import FotosVideos from './Fotosvideos'
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
         <Route path="/admin" element={<AdminGifts />} />
         <Route path="/fotos" element={<Photoshare />} />
         <Route path="/FotoMarco" element={<FotoMarco/>} /> 
+        <Route path="/Fotosvideos" element={<FotosVideos/>} /> 
       </Routes>
     </Router>
   );
