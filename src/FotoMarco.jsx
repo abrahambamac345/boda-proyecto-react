@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import defaultImage from './assets/img/marcoboda.png'; // Importar la imagen predefinida
+import defaultImage1 from './assets/img/marcoboda (1).png'; // Importar la imagen predefinida del primer marco
+import defaultImage2 from './assets/img/marcoboda (2).png'; // Importar la imagen predefinida del segundo marco
 
 function FotoMarco() {
   const location = useLocation();
   const [uploadedImageUrl, setUploadedImageUrl] = useState('');
-  const [defaultImageUrl, setDefaultImageUrl] = useState('');
+  const [selectedFrame, setSelectedFrame] = useState(defaultImage1); // Estado para almacenar el marco seleccionado
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -13,9 +14,6 @@ function FotoMarco() {
     if (url) {
       setUploadedImageUrl(url);
     }
-
-    // Asignar la ruta de la imagen predefinida importada
-    setDefaultImageUrl(defaultImage);
   }, [location.search]);
 
   const handleDownload = () => {
@@ -29,46 +27,52 @@ function FotoMarco() {
       canvas.width = uploadedImage.width;
       canvas.height = uploadedImage.height;
 
-      const defaultImage = new Image();
-      defaultImage.onload = () => {
+      const frameImage = new Image();
+      frameImage.onload = () => {
         ctx.drawImage(uploadedImage, 0, 0, canvas.width, canvas.height);
-        ctx.drawImage(defaultImage, 0, 0, canvas.width, canvas.height);
+        ctx.drawImage(frameImage, 0, 0, canvas.width, canvas.height);
 
-        // Convertir el canvas a una URL de datos
         const dataURL = canvas.toDataURL('image/png');
 
-        // Crear un enlace para abrir la imagen combinada en una nueva pestaña
         const link = document.createElement('a');
         link.href = dataURL;
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
-        link.download = 'foto_con_marco.png'; // Nombre del archivo a descargar
+        link.download = 'foto_con_marco.png';
 
-        // Simular un clic en el enlace para abrirlo en una nueva pestaña
         link.click();
       };
-      defaultImage.src = defaultImageUrl;
+      frameImage.src = selectedFrame; // Usa el marco seleccionado
     };
     uploadedImage.src = uploadedImageUrl;
   };
 
+  // Función para manejar el cambio de marco seleccionado
+  const handleFrameChange = (event) => {
+    setSelectedFrame(event.target.value);
+  };
+
   return (
-  <div>
+    <div>
       <div className='foto-marco-container'>
         <div className="image-container">
           {uploadedImageUrl && (
             <img src={uploadedImageUrl} alt="Foto cargada" className="default-image" />
           )}
-          {defaultImageUrl && (
-            <img src={defaultImageUrl} alt="Imagen predefinida" className="uploaded-image" />
+          {selectedFrame && (
+            <img src={selectedFrame} alt="Marco seleccionado" className="uploaded-image" />
           )}
         </div>
       </div>
-     <div className='sss'>
-         <h1 className='text-vesti'>Descarga un recuerdo!</h1>
-           <button onClick={handleDownload} className='tfotos'>Descargar Foto con Marco</button>
-     </div>
-  </div>
+      <div className='sss'>
+        <h1 className='text-vesti'>Descarga un recuerdo!</h1>
+        <select onChange={handleFrameChange}>
+          <option value={defaultImage1}>Marco 1</option>
+          <option value={defaultImage2}>Marco 2</option>
+        </select>
+        <button onClick={handleDownload} className='tfotos'>Descargar Foto con Marco</button>
+      </div>
+    </div>
   );
 }
 
